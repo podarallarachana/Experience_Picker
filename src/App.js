@@ -1,15 +1,15 @@
 import React from "react";
 import axios from "axios";
-import "./App.css";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Home from "./Home/home";
+import About from "./About/about";
+import Find from "./Find/find";
+import SurpiseMe from "./SurpiseMe/surprise";
+import Featured from "./Featured/featured";
 require("dotenv").config();
 
 class App extends React.Component {
-  state = {
-    persons: []
-  };
-
   componentDidMount() {
-    console.log(process.env.REACT_APP_WORKING);
     axios
       .get(
         `${"https://cors-anywhere.herokuapp.com/"}https://api.yelp.com/v3/businesses/WavvLdfdP6g8aZTtbBQHTw`,
@@ -31,7 +31,18 @@ class App extends React.Component {
   }
 
   render() {
-    return <p>{this.state.persons.id}</p>;
+    return (
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/about" component={About} />
+          <Route path="/find" component={Find} />
+          <Route path="/featured" component={Featured} />
+          <Route path="/surpriseme" component={SurpiseMe} />
+          <Route path="/" render={() => <div>404</div>} />
+        </Switch>
+      </BrowserRouter>
+    );
   }
 }
 
