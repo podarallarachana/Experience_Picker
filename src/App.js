@@ -1,27 +1,38 @@
 import React from "react";
-import logo from "./logo.svg";
+import axios from "axios";
 import "./App.css";
+require("dotenv").config();
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <h1>Hello World</h1>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  state = {
+    persons: []
+  };
+
+  componentDidMount() {
+    console.log(process.env.REACT_APP_WORKING);
+    axios
+      .get(
+        `${"https://cors-anywhere.herokuapp.com/"}https://api.yelp.com/v3/businesses/WavvLdfdP6g8aZTtbBQHTw`,
+        {
+          headers: {
+            Authorization: process.env.REACT_APP_API_KEY
+          },
+          params: {
+            categories: "breakfast_brunch"
+          }
+        }
+      )
+      .then(res => {
+        console.log(res);
+      })
+      .catch(err => {
+        console.log("error");
+      });
+  }
+
+  render() {
+    return <p>{this.state.persons.id}</p>;
+  }
 }
 
 export default App;
