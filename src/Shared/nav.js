@@ -11,6 +11,7 @@ const Nav = props => {
       type: "setState",
       payload: { state, selected: props.selected }
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

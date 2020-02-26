@@ -1,11 +1,11 @@
 import React from "react";
 import axios from "axios";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Home from "./Home/home";
-import About from "./About/about";
-import Find from "./Find/find";
-import SurpiseMe from "./SurpiseMe/surprise";
-import Recommended from "./Recommended/recommended";
+import Home from "./Pages/Home/home";
+import About from "./Pages/About/about";
+import Find from "./Pages/Find/find";
+import SurpiseMe from "./Pages/SurpriseMe/surprise";
+import Recommended from "./Pages/Recommended/recommended";
 require("dotenv").config();
 
 class App extends React.Component {

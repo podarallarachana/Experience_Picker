@@ -1,5 +1,5 @@
 import React from "react";
-import Nav from "../Shared/nav";
+import Nav from "../../Shared/nav";
 
 class About extends React.Component {
   render() {
