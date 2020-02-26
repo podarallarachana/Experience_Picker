@@ -5,30 +5,41 @@ import Home from "./Home/home";
 import About from "./About/about";
 import Find from "./Find/find";
 import SurpiseMe from "./SurpiseMe/surprise";
-import Featured from "./Featured/featured";
+import Recommended from "./Recommended/recommended";
 require("dotenv").config();
 
 class App extends React.Component {
+  state = {
+    curr: "home",
+    num: 5
+  };
+
   componentDidMount() {
-    axios
-      .get(
-        `${"https://cors-anywhere.herokuapp.com/"}https://api.yelp.com/v3/businesses/WavvLdfdP6g8aZTtbBQHTw`,
-        {
-          headers: {
-            Authorization: process.env.REACT_APP_API_KEY
-          },
-          params: {
-            categories: "breakfast_brunch"
-          }
-        }
-      )
-      .then(res => {
-        console.log(res);
-      })
-      .catch(err => {
-        console.log("error");
-      });
+    console.log(this.state.num);
+    this.setState({ num: 6 }, () => {
+      console.log(this.state.num);
+    });
   }
+  // componentDidMount() {
+  //   axios
+  //     .get(
+  //       `${"https://cors-anywhere.herokuapp.com/"}https://api.yelp.com/v3/businesses/WavvLdfdP6g8aZTtbBQHTw`,
+  //       {
+  //         headers: {
+  //           Authorization: process.env.REACT_APP_API_KEY
+  //         },
+  //         params: {
+  //           categories: "breakfast_brunch"
+  //         }
+  //       }
+  //     )
+  //     .then(res => {
+  //       console.log(res);
+  //     })
+  //     .catch(err => {
+  //       console.log("error");
+  //     });
+  // }
 
   render() {
     return (
@@ -37,7 +48,7 @@ class App extends React.Component {
           <Route path="/" exact component={Home} />
           <Route path="/about" component={About} />
           <Route path="/find" component={Find} />
-          <Route path="/featured" component={Featured} />
+          <Route path="/recommended" component={Recommended} />
           <Route path="/surpriseme" component={SurpiseMe} />
           <Route path="/" render={() => <div>404</div>} />
         </Switch>

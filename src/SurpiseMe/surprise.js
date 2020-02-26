@@ -1,8 +1,13 @@
 import React from "react";
+import Nav from "../Shared/nav";
 
 class SurpriseMe extends React.Component {
   render() {
-    return <p>SurpriseMe</p>;
+    return (
+      <div className="App">
+        <Nav />
+      </div>
+    );
   }
 }
 

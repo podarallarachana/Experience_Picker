@@ -1,8 +1,13 @@
 import React from "react";
+import Nav from "../Shared/nav";
 
 class About extends React.Component {
   render() {
-    return <p>about</p>;
+    return (
+      <div className="App">
+        <Nav />
+      </div>
+    );
   }
 }
 

@@ -1,7 +1,7 @@
 import React from "react";
 import Nav from "../Shared/nav";
 
-class Find extends React.Component {
+class Recommended extends React.Component {
   render() {
     return (
       <div className="App">
@@ -11,4 +11,4 @@ class Find extends React.Component {
   }
 }
 
-export default Find;
+export default Recommended;
