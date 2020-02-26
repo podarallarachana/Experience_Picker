@@ -25,12 +25,23 @@ class Find extends React.Component {
   }
 
   render() {
-    return (
-      <div className="App">
-        <Nav selected="find" />
-        <h1>{this.context.state.selected}</h1>
-      </div>
-    );
+    if (this.props.data.business) {
+      return (
+        <div className="App">
+          <Nav selected="find" />
+          <h1>{this.context.state.selected}</h1>
+          <h2>{this.props.data.business.id}</h2>
+        </div>
+      );
+    } else {
+      return (
+        <div className="App">
+          <Nav selected="find" />
+          <h1>{this.context.state.selected}</h1>
+          <h2>NO</h2>
+        </div>
+      );
+    }
   }
 }
 
