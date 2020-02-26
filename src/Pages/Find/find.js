@@ -20,10 +20,6 @@ const getQuery = gql`
 class Find extends React.Component {
   static contextType = Context;
 
-  componentDidMount() {
-    console.log(this.props);
-  }
-
   render() {
     if (this.props.data.business) {
       return (
