@@ -1,10 +1,17 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Menu } from "antd";
 import { Link } from "react-router-dom";
 import Context from "../Store/context";
 
-const Nav = () => {
+const Nav = props => {
   const { state, actions } = useContext(Context);
+
+  useEffect(() => {
+    actions({
+      type: "setState",
+      payload: { state, selected: props.selected }
+    });
+  }, []);
 
   return (
     <div>

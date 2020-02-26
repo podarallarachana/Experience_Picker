@@ -5,7 +5,7 @@ class SurpriseMe extends React.Component {
   render() {
     return (
       <div className="App">
-        <Nav />
+        <Nav selected="surpriseme" />
       </div>
     );
   }

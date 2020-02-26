@@ -9,17 +9,6 @@ import Recommended from "./Recommended/recommended";
 require("dotenv").config();
 
 class App extends React.Component {
-  state = {
-    curr: "home",
-    num: 5
-  };
-
-  componentDidMount() {
-    console.log(this.state.num);
-    this.setState({ num: 6 }, () => {
-      console.log(this.state.num);
-    });
-  }
   // componentDidMount() {
   //   axios
   //     .get(

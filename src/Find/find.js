@@ -5,7 +5,7 @@ class Find extends React.Component {
   render() {
     return (
       <div className="App">
-        <Nav />
+        <Nav selected="find" />
       </div>
     );
   }

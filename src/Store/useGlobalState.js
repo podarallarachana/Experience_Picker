@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const useGlobalState = () => {
-  const [state, setState] = useState({ selected: "home", list: [] });
+  const [state, setState] = useState({ selected: "", list: [] });
 
   const actions = action => {
     const { type, payload } = action;
