@@ -6,7 +6,6 @@ import About from "./Pages/About/about";
 import Find from "./Pages/Find/find";
 import SurpiseMe from "./Pages/SurpriseMe/surprise";
 import Recommended from "./Pages/Recommended/recommended";
-require("dotenv").config();
 
 class App extends React.Component {
   // componentDidMount() {
