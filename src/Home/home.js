@@ -7,13 +7,6 @@ class Home extends React.Component {
     num: 10
   };
 
-  componentDidMount() {
-    console.log(this.state.sop);
-    this.setState({ sop: "sec" }, () => {
-      console.log(this.state.sop);
-    });
-  }
-
   render() {
     return (
       <div>
