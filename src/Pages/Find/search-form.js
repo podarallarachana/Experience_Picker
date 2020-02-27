@@ -9,8 +9,12 @@ const SearchForm = props => {
       <Row gutter={[16, 16]} type="flex" justify="center">
         <Col xs={24} sm={24} md={12} lg={10} xl={10}>
           <h4>Category</h4>
-          <Select defaultValue="All..." showSearch style={{ width: "100%" }}>
-            <Option value="All...">All...</Option>
+          <Select
+            defaultValue="Restaurants"
+            showSearch
+            style={{ width: "100%" }}
+          >
+            <Option value="Restaurants">Restaurants</Option>
             <Option value="10">10 mi</Option>
           </Select>
         </Col>

@@ -40,4 +40,5 @@ class About extends React.Component {
   }
 }
 
-export default graphql(getQuery)(About);
+// export default graphql(getQuery)(About);
+export default About;

@@ -45,4 +45,5 @@ class Find extends React.Component {
   }
 }
 
-export default graphql(getQuery)(Find);
+// export default graphql(getQuery)(Find);
+export default Find;
