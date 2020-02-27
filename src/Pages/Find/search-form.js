@@ -1,6 +1,6 @@
-import React, { useContext, useEffect } from "react";
-import { Row, Col, Slider, Card, Radio, Select, Input, Button } from "antd";
-
+import React from "react";
+import { Row, Col, Slider, Card, Radio, Select, Button } from "antd";
+import UserLocation from "../../Shared/user-location";
 const { Option } = Select;
 
 const SearchForm = props => {
@@ -28,12 +28,7 @@ const SearchForm = props => {
           </Select>
         </Col>
       </Row>
-      <Row gutter={[16, 16]} type="flex" justify="center">
-        <Col xs={24} sm={24} md={12} lg={10} xl={10}>
-          <h4>Zip code</h4>
-          <Input placeholder="55129" style={{ width: "100%" }} />
-        </Col>
-      </Row>
+      <UserLocation />
       <Row gutter={[16, 16]} type="flex" justify="center">
         <Col xs={24} sm={24} md={12} lg={10} xl={10}>
           <h4>Distances</h4>
