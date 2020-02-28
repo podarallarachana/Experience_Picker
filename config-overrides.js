@@ -1,6 +1,15 @@
-const { override, fixBabelImports, addLessLoader } = require("customize-cra");
+const {
+  override,
+  addBabelPlugins,
+  fixBabelImports,
+  addLessLoader
+} = require("customize-cra");
 
 module.exports = override(
+  ...addBabelPlugins(
+    "babel-plugin-transform-do-expressions",
+    "@babel/plugin-proposal-object-rest-spread"
+  ),
   fixBabelImports("import", {
     libraryName: "antd",
     libraryDirectory: "es",

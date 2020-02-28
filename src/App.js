@@ -40,7 +40,7 @@ const App = props => {
     getLocation(function() {
       actions({
         type: "setState",
-        payload: { state, selected: curr, coords: coords }
+        payload: { ...state, selected: curr, coords: coords }
       });
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
