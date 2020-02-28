@@ -8,11 +8,12 @@ class About extends React.Component {
     return (
       <div className="App">
         <Nav selected="about" />
-        <h1>{this.context.state.selected}</h1>
+        <h1>{this.context.state.coords}</h1>
       </div>
     );
   }
 }
+About.contextType = Context;
 
 // export default graphql(getQuery)(About);
 export default About;

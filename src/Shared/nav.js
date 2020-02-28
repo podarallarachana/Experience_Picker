@@ -6,11 +6,12 @@ const { Header } = Layout;
 
 const Nav = props => {
   const { state, actions } = useContext(Context);
+  let coords = state.coords;
 
   useEffect(() => {
     actions({
       type: "setState",
-      payload: { state, selected: props.selected }
+      payload: { state, coords: coords, selected: props.selected }
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -22,7 +23,7 @@ const Nav = props => {
           onClick={e =>
             actions({
               type: "setState",
-              payload: { state, selected: e.key }
+              payload: { state, coords: coords, selected: e.key }
             })
           }
           selectedKeys={state.selected}
