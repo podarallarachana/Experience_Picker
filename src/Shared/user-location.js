@@ -74,6 +74,7 @@ const UserLocation = props => {
             }) => (
               <div>
                 <Input
+                  allowClear
                   {...getInputProps({
                     placeholder: state.address,
                     className: "location-search-input"

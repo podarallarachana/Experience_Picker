@@ -44,13 +44,13 @@ const SearchForm = props => {
             style={{ width: "100%" }}
             onChange={e => props.update_curr_form("distance", e)}
           >
-            <Option value="5">5 mi</Option>
-            <Option value="10">10 mi</Option>
-            <Option value="15">15 mi</Option>
-            <Option value="20">20 mi</Option>
-            <Option value="40">40 mi</Option>
-            <Option value="60">60 mi</Option>
-            <Option value="100">100 mi</Option>
+            <Option value="500">5 mi</Option>
+            <Option value="1000">10 mi</Option>
+            <Option value="1500">15 mi</Option>
+            <Option value="2000">20 mi</Option>
+            <Option value="4000">40 mi</Option>
+            <Option value="6000">60 mi</Option>
+            <Option value="1000000">100 mi</Option>
           </Select>
         </Col>
       </Row>
@@ -58,7 +58,7 @@ const SearchForm = props => {
         <Col xs={24} sm={24} md={12} lg={10} xl={10}>
           <Tabs defaultActiveKey="1">
             <TabPane tab=" Restaurants" key="1">
-              <Restaurant />
+              <Restaurant curr_form={props.curr_form} />
             </TabPane>
             <TabPane tab="Recreational" key="2">
               <Recreational />
