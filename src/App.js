@@ -7,41 +7,51 @@ import SurpiseMe from "./Pages/SurpriseMe/surprise";
 import Recommended from "./Pages/Recommended/recommended";
 import Context from "./Store/context";
 import Geocode from "react-geocode";
-import PlacesAutocomplete, {
-  geocodeByAddress,
-  getLatLng
-} from "react-places-autocomplete";
 
-// set Google Maps Geocoding API for purposes of quota management. Its optional but recommended.
 Geocode.setApiKey(process.env.REACT_APP_GOOGLE_KEY);
-
-// set response language. Defaults to english.
 Geocode.setLanguage("en");
 
-// set response region. Its optional.
-// A Geocoding request with region=es (Spain) will return the Spanish city.
-Geocode.setRegion("es");
-
-// Enable or disable logs. Its optional.
-Geocode.enableDebug();
-
-let coords = "";
+let lat = "";
+let long = "";
 let address = "";
+let isLoading = "";
 
 function getLocation(callback) {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(
       function(position) {
-        coords = position.coords.latitude + " " + position.coords.longitude;
-        callback();
+        lat = position.coords.latitude;
+        long = position.coords.longitude;
+
+        // Get address from latidude & longitude.
+        Geocode.fromLatLng(lat, long).then(
+          response => {
+            address = response.results[0].formatted_address;
+            isLoading = "success";
+            callback();
+          },
+          error => {
+            lat = "NA";
+            long = "NA";
+            address = "please enter address, unable to get location!";
+            isLoading = "warning";
+            callback();
+          }
+        );
       },
       function(error) {
-        coords = "NA";
+        lat = "NA";
+        long = "NA";
+        address = "please enter address, unable to get location!";
+        isLoading = "warning";
         callback();
       }
     );
   } else {
-    coords = "NA";
+    lat = "NA";
+    long = "NA";
+    address = "please enter address, unable to get location!";
+    isLoading = "warning";
     callback();
   }
 }
@@ -57,24 +67,15 @@ const App = props => {
     }
 
     getLocation(function() {
-      console.log(coords);
-      // Get address from latidude & longitude.
-      Geocode.fromLatLng("44.93833465644594", "-92.89044200576455").then(
-        response => {
-          const address = response.results[0].formatted_address;
-          console.log(address);
-        },
-        error => {
-          console.error(error);
-        }
-      );
-
       actions({
         type: "setState",
         payload: {
           ...state,
           selected: curr,
-          coords: coords
+          lat: lat,
+          long: long,
+          address: address,
+          isLoading: isLoading
         }
       });
     });
