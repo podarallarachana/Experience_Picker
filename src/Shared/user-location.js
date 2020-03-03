@@ -37,9 +37,7 @@ const UserLocation = props => {
           payload: {
             ...state,
             address: address,
-            lat: "NA",
-            long: "NA",
-            val_status: "error"
+            val_status: "warning"
           }
         });
       });
@@ -58,7 +56,7 @@ const UserLocation = props => {
       <Col xs={24} sm={24} md={12} lg={10} xl={10}>
         <Form.Item
           label="Address"
-          help="*enter address or turn on location services and refresh"
+          help="*enter address if location services unavailable!"
           validateStatus={state.val_status}
         >
           <PlacesAutocomplete

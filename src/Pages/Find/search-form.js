@@ -32,11 +32,6 @@ const SearchForm = props => {
 
   // const [search_by, setSearchBy] = useState("");
 
-  useEffect(() => {
-    // console.log(categories);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
   return (
     <Card>
       <UserLocation />
@@ -47,7 +42,7 @@ const SearchForm = props => {
             defaultValue={props.curr_form.distance}
             showSearch
             style={{ width: "100%" }}
-            onChange={val => props.update_curr_form("distance", val)}
+            onChange={e => props.update_curr_form("distance", e)}
           >
             <Option value="5">5 mi</Option>
             <Option value="10">10 mi</Option>

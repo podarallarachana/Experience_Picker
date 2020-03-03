@@ -3,13 +3,13 @@ import Nav from "../../Shared/nav";
 import SearchForm from "./search-form";
 import "./find.scss";
 import Context from "../../Store/context";
+import FindResults from "./find-results";
 
 class Find extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       curr_form: {
-        address: "",
         distance: "10",
 
         res_category: "",
@@ -35,7 +35,9 @@ class Find extends React.Component {
 
   update_curr_form = (prop, value) => {
     this.setState({
-      [prop]: value
+      curr_form: {
+        [prop]: value
+      }
     });
   };
 
@@ -44,11 +46,12 @@ class Find extends React.Component {
       <div>
         <Nav selected="find" />
         <div style={{ padding: "0 50px" }}>
-          <h1>Find something for you!</h1>
           <SearchForm
             curr_form={this.state.curr_form}
             update_curr_form={this.update_curr_form}
           />
+          <br />
+          <FindResults curr_form={this.state.curr_form} />
         </div>
       </div>
     );

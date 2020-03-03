@@ -31,8 +31,6 @@ function getLocation(callback) {
             callback();
           },
           error => {
-            lat = "NA";
-            long = "NA";
             address = "please enter address, unable to get location!";
             val_status = "warning";
             callback();
@@ -40,16 +38,12 @@ function getLocation(callback) {
         );
       },
       function(error) {
-        lat = "NA";
-        long = "NA";
         address = "please enter address, unable to get location!";
         val_status = "warning";
         callback();
       }
     );
   } else {
-    lat = "NA";
-    long = "NA";
     address = "please enter address, unable to get location!";
     val_status = "warning";
     callback();
