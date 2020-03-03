@@ -3,7 +3,9 @@ import { useState } from "react";
 const useGlobalState = () => {
   const [state, setState] = useState({
     selected: "",
-    coords: "loading..."
+    coords: "",
+    coords: "",
+    address: "loading..."
   });
 
   const actions = action => {
