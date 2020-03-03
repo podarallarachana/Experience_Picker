@@ -1,33 +1,21 @@
-import React from "react";
-import { Row, Col, Slider, Card, Radio, Select, Button } from "antd";
+import React, { useEffect } from "react";
+import { Row, Col, Slider, Tabs, Card, Radio, Select, Button } from "antd";
 import UserLocation from "../../Shared/user-location";
+import Restaurant from "./restaurant";
+import Recreational from "./recreational";
+import Events from "./events";
+// import categories from "../Shared/categories-data";
 const { Option } = Select;
+const { TabPane } = Tabs;
 
 const SearchForm = props => {
+  useEffect(() => {
+    // console.log(categories);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <Card>
-      <Row gutter={[16, 16]} type="flex" justify="center">
-        <Col xs={24} sm={24} md={12} lg={10} xl={10}>
-          <h4>Category</h4>
-          <Select
-            defaultValue="Restaurants"
-            showSearch
-            style={{ width: "100%" }}
-          >
-            <Option value="Restaurants">Restaurants</Option>
-            <Option value="10">10 mi</Option>
-          </Select>
-        </Col>
-      </Row>
-      <Row gutter={[16, 16]} type="flex" justify="center">
-        <Col xs={24} sm={24} md={12} lg={10} xl={10}>
-          <h4>Subcatergory</h4>
-          <Select defaultValue="All..." showSearch style={{ width: "100%" }}>
-            <Option value="All...">All...</Option>
-            <Option value="10">10 mi</Option>
-          </Select>
-        </Col>
-      </Row>
       <UserLocation />
       <Row gutter={[16, 16]} type="flex" justify="center">
         <Col xs={24} sm={24} md={12} lg={10} xl={10}>
@@ -40,19 +28,17 @@ const SearchForm = props => {
       </Row>
       <Row gutter={[16, 16]} type="flex" justify="center">
         <Col xs={24} sm={24} md={12} lg={10} xl={10}>
-          <h4>Rating</h4>
-          <Slider range step={0.5} min={1} max={5} defaultValue={[3, 4.5]} />
-        </Col>
-      </Row>
-      <Row gutter={[16, 16]} type="flex" justify="center">
-        <Col xs={24} sm={24} md={12} lg={10} xl={10}>
-          <h4>Price</h4>
-          <Radio.Group value={2}>
-            <Radio value={1}>$</Radio>
-            <Radio value={2}>$$</Radio>
-            <Radio value={3}>$$$</Radio>
-            <Radio value={4}>$$$$</Radio>
-          </Radio.Group>
+          <Tabs defaultActiveKey="1">
+            <TabPane tab=" Restaurants" key="1">
+              <Restaurant />
+            </TabPane>
+            <TabPane tab="Recreational" key="2">
+              <Recreational />
+            </TabPane>
+            <TabPane tab="Events" key="3">
+              <Events />
+            </TabPane>
+          </Tabs>
         </Col>
       </Row>
       <br />

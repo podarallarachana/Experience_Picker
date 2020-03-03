@@ -7,7 +7,6 @@ const UserLocation = props => {
 
   return (
     <div>
-      <h1>{state.coords}</h1>
       <Row gutter={[16, 16]} type="flex" justify="center">
         <Col xs={24} sm={24} md={12} lg={10} xl={10}>
           <h4>Zip code</h4>

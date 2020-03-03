@@ -10,8 +10,7 @@ class Find extends React.Component {
       <div>
         <Nav selected="find" />
         <div style={{ padding: "0 50px" }}>
-          <h1>{this.context.state.selected}</h1>
-          <h1>{this.context.state.coords}</h1>
+          <h1>Find something for you!</h1>
           <SearchForm />
         </div>
       </div>
