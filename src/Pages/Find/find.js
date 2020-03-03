@@ -11,87 +11,31 @@ class Find extends React.Component {
       curr_form: {
         address: "",
         distance: "10",
+
         res_category: "",
         res_subcategory: "",
         res_rating: "",
         res_price: "",
         res_open: "",
+
         rec_category: "",
         rec_subcategory: "",
         rec_rating: "",
         rec_price: "",
         rec_open: "",
+
         ev_category: "",
         ev_available: "",
         ev_free: "",
+
         search_by: ""
       }
     };
   }
 
-  update_address = value => {
+  update_curr_form = (prop, value) => {
     this.setState({
-      address: value
-    });
-  };
-
-  update_distance = value => {
-    this.setState({
-      distance: value
-    });
-  };
-
-  update_distance = value => {
-    this.setState({
-      distance: value
-    });
-  };
-
-  update_distance = value => {
-    this.setState({
-      distance: value
-    });
-  };
-
-  update_distance = value => {
-    this.setState({
-      distance: value
-    });
-  };
-
-  update_distance = value => {
-    this.setState({
-      distance: value
-    });
-  };
-
-  update_distance = value => {
-    this.setState({
-      distance: value
-    });
-  };
-
-  update_distance = value => {
-    this.setState({
-      distance: value
-    });
-  };
-
-  update_distance = value => {
-    this.setState({
-      distance: value
-    });
-  };
-
-  update_distance = value => {
-    this.setState({
-      distance: value
-    });
-  };
-
-  update_distance = value => {
-    this.setState({
-      distance: value
+      [prop]: value
     });
   };
 
@@ -103,7 +47,7 @@ class Find extends React.Component {
           <h1>Find something for you!</h1>
           <SearchForm
             curr_form={this.state.curr_form}
-            update_distance={this.update_distance}
+            update_curr_form={this.update_curr_form}
           />
         </div>
       </div>

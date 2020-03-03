@@ -1,20 +1,68 @@
-import React, { useContext, useEffect, useState } from "react";
-import { Row, Col, Input } from "antd";
-import Context from "../Store/context";
+import React from "react";
+import PlacesAutocomplete, {
+  geocodeByAddress,
+  getLatLng
+} from "react-places-autocomplete";
 
-const UserLocation = props => {
-  const { state, actions } = useContext(Context);
+class UserLocation extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { address: "" };
+  }
 
-  return (
-    <div>
-      <Row gutter={[16, 16]} type="flex" justify="center">
-        <Col xs={24} sm={24} md={12} lg={10} xl={10}>
-          <h4>Zip code</h4>
-          <Input placeholder={state.coords} style={{ width: "100%" }} />
-        </Col>
-      </Row>
-    </div>
-  );
-};
+  handleChange = address => {
+    this.setState({ address });
+  };
+
+  handleSelect = address => {
+    geocodeByAddress(address)
+      .then(results => getLatLng(results[0]))
+      .then(latLng => console.log("Success", latLng))
+      .catch(error => console.error("Error", error));
+  };
+
+  render() {
+    return (
+      <PlacesAutocomplete
+        value={this.state.address}
+        onChange={this.handleChange}
+        onSelect={this.handleSelect}
+      >
+        {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
+          <div>
+            <input
+              {...getInputProps({
+                placeholder: "Search Places ...",
+                className: "location-search-input"
+              })}
+            />
+            <div className="autocomplete-dropdown-container">
+              {loading && <div>Loading...</div>}
+              {suggestions.map(suggestion => {
+                const className = suggestion.active
+                  ? "suggestion-item--active"
+                  : "suggestion-item";
+                // inline style for demonstration purpose
+                const style = suggestion.active
+                  ? { backgroundColor: "#fafafa", cursor: "pointer" }
+                  : { backgroundColor: "#ffffff", cursor: "pointer" };
+                return (
+                  <div
+                    {...getSuggestionItemProps(suggestion, {
+                      className,
+                      style
+                    })}
+                  >
+                    <span>{suggestion.description}</span>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        )}
+      </PlacesAutocomplete>
+    );
+  }
+}
 
 export default UserLocation;

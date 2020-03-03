@@ -47,7 +47,7 @@ const SearchForm = props => {
             defaultValue={props.curr_form.distance}
             showSearch
             style={{ width: "100%" }}
-            onChange={e => props.update_distance(e)}
+            onChange={val => props.update_curr_form("distance", val)}
           >
             <Option value="5">5 mi</Option>
             <Option value="10">10 mi</Option>
