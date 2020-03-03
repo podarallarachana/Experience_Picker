@@ -14,7 +14,7 @@ Geocode.setLanguage("en");
 let lat = "";
 let long = "";
 let address = "";
-let isLoading = "";
+let val_status = "";
 
 function getLocation(callback) {
   if (navigator.geolocation) {
@@ -27,14 +27,14 @@ function getLocation(callback) {
         Geocode.fromLatLng(lat, long).then(
           response => {
             address = response.results[0].formatted_address;
-            isLoading = "success";
+            val_status = "success";
             callback();
           },
           error => {
             lat = "NA";
             long = "NA";
             address = "please enter address, unable to get location!";
-            isLoading = "warning";
+            val_status = "warning";
             callback();
           }
         );
@@ -43,7 +43,7 @@ function getLocation(callback) {
         lat = "NA";
         long = "NA";
         address = "please enter address, unable to get location!";
-        isLoading = "warning";
+        val_status = "warning";
         callback();
       }
     );
@@ -51,7 +51,7 @@ function getLocation(callback) {
     lat = "NA";
     long = "NA";
     address = "please enter address, unable to get location!";
-    isLoading = "warning";
+    val_status = "warning";
     callback();
   }
 }
@@ -75,7 +75,7 @@ const App = props => {
           lat: lat,
           long: long,
           address: address,
-          isLoading: isLoading
+          val_status: val_status
         }
       });
     });
