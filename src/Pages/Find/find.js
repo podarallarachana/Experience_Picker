@@ -5,6 +5,7 @@ import "./find.scss";
 import Context from "../../Store/context";
 import FindResults from "./results";
 import axios from "axios";
+import { Pagination } from "antd";
 
 class Find extends React.Component {
   constructor(props) {
@@ -31,9 +32,9 @@ class Find extends React.Component {
         ev_available: "",
         ev_free: "",
 
-        search_by: "",
-
-        results: undefined
+        pageNum: 1,
+        results: undefined,
+        offset: 0
       }
     };
   }
@@ -50,7 +51,8 @@ class Find extends React.Component {
             latitude: this.context.state.lat,
             longitude: this.context.state.long,
             radius: this.state.curr_form.distance,
-            limit: 50
+            limit: 50,
+            offset: this.state.curr_form.offset
           }
         }
       )
@@ -80,7 +82,9 @@ class Find extends React.Component {
         {
           curr_form: {
             ...this.state.curr_form,
-            is_loading: true
+            is_loading: true,
+            offset: 0,
+            pageNum: 1
           }
         },
         () => {
@@ -99,6 +103,21 @@ class Find extends React.Component {
     });
   };
 
+  handlePagination = pageNumber => {
+    console.log(pageNumber);
+    this.setState(
+      {
+        curr_form: {
+          ...this.state.curr_form,
+          is_loading: true,
+          offset: (pageNumber - 1) * 50,
+          pageNum: pageNumber
+        }
+      },
+      () => this.fetchData()
+    );
+  };
+
   render() {
     return (
       <div>
@@ -111,6 +130,20 @@ class Find extends React.Component {
           />
           <br />
           <FindResults curr_form={this.state.curr_form} />
+          {this.state.curr_form.results !== null &&
+          this.state.curr_form.results !== undefined &&
+          this.state.curr_form.is_loading === false &&
+          this.state.curr_form.results.data.businesses.length > 0 ? (
+            <Pagination
+              total={this.state.curr_form.results.data.total}
+              showTotal={total => `Total ${total} items`}
+              pageSize={50}
+              defaultCurrent={this.state.pageNum}
+              onChange={this.handlePagination}
+            />
+          ) : (
+            ""
+          )}
         </div>
       </div>
     );
