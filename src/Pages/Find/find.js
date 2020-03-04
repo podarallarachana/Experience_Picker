@@ -13,32 +13,30 @@ class Find extends React.Component {
     this.state = {
       curr_form: {
         is_loading: false,
-
         distance: "40000",
-
         res_category: "banana",
         res_subcategory: "",
         res_rating: "",
         res_price: "$",
         res_open: false,
-
         rec_category: "",
         rec_subcategory: "",
         rec_rating: "",
         rec_price: "",
         rec_open: false,
-
         ev_category: "",
         ev_available: "",
         ev_free: "",
-
         pageNum: 1,
         results: undefined,
-        offset: 0
+        offset: 0,
+        detail: -1,
+        detail_results: undefined
       }
     };
   }
 
+  //FETCHES APPROPRIATE DATA
   fetchData = async () => {
     axios
       .get(
@@ -76,6 +74,40 @@ class Find extends React.Component {
       });
   };
 
+  //FETCHES DETAIL DATA
+  fetchDetails = async () => {
+    axios
+      .get(
+        `${"https://cors-anywhere.herokuapp.com/"}https://api.yelp.com/v3/businesses/${
+          this.state.detail
+        }`,
+        {
+          headers: {
+            Authorization: process.env.REACT_APP_YELP_KEY
+          }
+        }
+      )
+      .then(res => {
+        this.setState({
+          curr_form: {
+            ...this.state.curr_form,
+            detail_results: res,
+            is_loading: false
+          }
+        });
+      })
+      .catch(err => {
+        this.setState({
+          curr_form: {
+            ...this.state.curr_form,
+            detail_results: null,
+            is_loading: false
+          }
+        });
+      });
+  };
+
+  //FETCHES DATA ON SUBMIT
   submit_curr_form = () => {
     if (this.context.state.val_status === "success") {
       this.setState(
@@ -94,6 +126,21 @@ class Find extends React.Component {
     }
   };
 
+  //FETCHES DETAILS ABOUT BUSINESS
+  get_details = id => {
+    this.setState(
+      {
+        curr_form: {
+          ...this.state.curr_form,
+          detail: id,
+          is_loading: true
+        }
+      },
+      () => this.fetchDetails()
+    );
+  };
+
+  //UPDATES FORM VALUES FROM CHILD COMPONENTS
   update_curr_form = (prop, value) => {
     this.setState({
       curr_form: {
@@ -103,6 +150,7 @@ class Find extends React.Component {
     });
   };
 
+  //FETCHES NEW DATA AGAIN WHEN PAGE NUM CHANGES
   handlePagination = pageNumber => {
     this.setState(
       {
@@ -129,12 +177,19 @@ class Find extends React.Component {
           />
           <br />
           <Row gutter={[16, 16]} type="flex" justify="center">
-            <FindResults curr_form={this.state.curr_form} />
-            {this.state.curr_form.results !== null &&
-            this.state.curr_form.results !== undefined &&
-            this.state.curr_form.is_loading === false &&
-            this.state.curr_form.results.data.businesses.length > 0 ? (
-              <Pagination
+            {this.state.curr_form.detail === -1 ? (
+              <FindResults
+                curr_form={this.state.curr_form}
+                get_details={this.get_details}
+              />
+            ) : (
+              <h1>YES</h1>
+            )}
+            {this.state.curr_form.results !== null && //RAN INTO ERROR FETCHING RESULTS
+            this.state.curr_form.results !== undefined && //USER JUST ENTERED PAGE
+            this.state.curr_form.is_loading === false && //IS NOT LOADING
+            this.state.curr_form.results.data.businesses.length > 0 ? ( //RESULTS ARE NOT EMPTY
+              <Pagination //IF ALL CHECKS PASS, ONLY THEN SHOW PAGINATION STUFF
                 total={
                   this.state.curr_form.results.data.total > 999
                     ? 999

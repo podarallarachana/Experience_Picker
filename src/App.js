@@ -3,7 +3,6 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from "./Pages/Home/home";
 import About from "./Pages/About/about";
 import Find from "./Pages/Find/find";
-import ItemDetails from "./Shared/item-details";
 import SurpiseMe from "./Pages/SurpriseMe/surprise";
 import Recommended from "./Pages/Recommended/recommended";
 import Context from "./Store/context";
@@ -83,7 +82,6 @@ const App = props => {
         <Route path="/" exact component={Home} />
         <Route path="/about" exact component={About} />
         <Route path="/find" exact component={Find} />
-        <Route path="/details/:id" component={ItemDetails} />
         <Route path="/recommended" exact component={Recommended} />
         <Route path="/surpriseme" exact component={SurpiseMe} />
         <Route path="/" render={() => <div>404</div>} />
