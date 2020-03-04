@@ -1,11 +1,12 @@
 import React from "react";
 import Nav from "../../Shared/nav";
-import SearchForm from "./search-form";
+import SearchForm from "./form/search-form";
 import "./find.scss";
 import Context from "../../Store/context";
 import FindResults from "./results";
 import axios from "axios";
 import { Pagination, Row } from "antd";
+import Details from "../../Shared/details";
 
 // DATA IS EITHER FETCHED ON FORM SUBMIT, NEW PAGE(PAGINATION) CLICK, OR BUSINESS CARD CLICK
 class Find extends React.Component {
@@ -80,7 +81,7 @@ class Find extends React.Component {
     axios
       .get(
         `${"https://cors-anywhere.herokuapp.com/"}https://api.yelp.com/v3/businesses/${
-          this.state.detail
+          this.state.curr_form.detail
         }`,
         {
           headers: {
@@ -184,9 +185,10 @@ class Find extends React.Component {
                 get_details={this.get_details}
               />
             ) : (
-              <col>
-                <h1>YES</h1>
-              </col>
+              <Details
+                curr_form={this.state.curr_form}
+                update_curr_form={this.update_curr_form}
+              />
             )}
           </Row>
           <Row gutter={[16, 16]} type="flex" justify="center">

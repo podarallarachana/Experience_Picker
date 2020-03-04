@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import { Row, Col, Tabs, Card, Select, Button } from "antd";
-import UserLocation from "../../Shared/user-location";
+import UserLocation from "../../../Shared/user-location";
 import Restaurant from "./restaurant";
 import Recreational from "./recreational";
 import Events from "./events";
-import Context from "../../Store/context";
+import Context from "../../../Store/context";
 // import categories from "../Shared/categories-data";
 const { Option } = Select;
 const { TabPane } = Tabs;
