@@ -3,8 +3,8 @@ import { useState } from "react";
 const useGlobalState = () => {
   const [state, setState] = useState({
     selected: "",
-    lat: "loading...",
-    long: "loading...",
+    lat: "-1",
+    long: "-1",
     address: "loading...",
     val_status: "warning"
   });

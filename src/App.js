@@ -11,8 +11,8 @@ import Geocode from "react-geocode";
 Geocode.setApiKey(process.env.REACT_APP_GOOGLE_KEY);
 Geocode.setLanguage("en");
 
-let lat = "";
-let long = "";
+let lat = "-1";
+let long = "-1";
 let address = "";
 let val_status = "";
 

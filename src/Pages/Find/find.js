@@ -10,20 +10,21 @@ class Find extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      is_loading: false,
       curr_form: {
-        distance: "1000",
+        distance: "40000",
 
         res_category: "banana",
         res_subcategory: "",
         res_rating: "",
         res_price: "$",
-        res_open: "",
+        res_open: false,
 
         rec_category: "",
         rec_subcategory: "",
         rec_rating: "",
         rec_price: "",
-        rec_open: "",
+        rec_open: false,
 
         ev_category: "",
         ev_available: "",
@@ -31,28 +32,12 @@ class Find extends React.Component {
 
         search_by: ""
       },
-      results: null
+      results: undefined
     };
   }
 
-  componentDidMount() {
-    this.fetchData();
-  }
-
-  update_curr_form = (prop, value) => {
-    this.setState(
-      {
-        curr_form: {
-          [prop]: value,
-          res_category: "tomato"
-        }
-      },
-      () => this.fetchData()
-    );
-  };
-
   fetchData = async () => {
-    await axios
+    axios
       .get(
         `${"https://cors-anywhere.herokuapp.com/"}https://api.yelp.com/v3/businesses/search`,
         {
@@ -60,19 +45,44 @@ class Find extends React.Component {
             Authorization: process.env.REACT_APP_YELP_KEY
           },
           params: {
-            location: "san francisco",
-            term: this.state.curr_form.res_category
-            // latitude: this.context.lat,
-            // longitude: this.context.long
+            latitude: this.context.state.lat,
+            longitude: this.context.state.long,
+            radius: this.state.curr_form.distance,
+            limit: 50
           }
         }
       )
       .then(res => {
-        this.setState({ results: res });
+        this.setState({
+          results: res,
+          is_loading: false
+        });
       })
       .catch(err => {
-        this.setState({ results: null });
+        this.setState({
+          results: null,
+          is_loading: false
+        });
       });
+  };
+
+  submit_curr_form = () => {
+    if (this.context.state.val_status === "success") {
+      this.setState(
+        {
+          is_loading: true
+        },
+        () => this.fetchData()
+      );
+    }
+  };
+
+  update_curr_form = (prop, value) => {
+    this.setState({
+      curr_form: {
+        [prop]: value
+      }
+    });
   };
 
   render() {
@@ -83,11 +93,13 @@ class Find extends React.Component {
           <SearchForm
             curr_form={this.state.curr_form}
             update_curr_form={this.update_curr_form}
+            submit_curr_form={this.submit_curr_form}
           />
           <br />
           <FindResults
             curr_form={this.state.curr_form}
             results={this.state.results}
+            is_loading={this.state.is_loading}
           />
         </div>
       </div>

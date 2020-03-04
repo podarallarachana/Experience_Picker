@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
-import { Row, Col, Select, Tabs, Slider, Radio, Checkbox } from "antd";
-const { TabPane } = Tabs;
+import React from "react";
+import { Row, Col, Select, Slider, Radio, Checkbox } from "antd";
 const { Option } = Select;
 
 const Restaurant = props => {

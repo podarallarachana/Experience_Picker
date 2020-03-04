@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Row, Col, Slider, Tabs, Card, Radio, Select, Button } from "antd";
+import React from "react";
+import { Row, Col, Tabs, Card, Select, Button } from "antd";
 import UserLocation from "../../Shared/user-location";
 import Restaurant from "./restaurant";
 import Recreational from "./recreational";
@@ -44,13 +44,12 @@ const SearchForm = props => {
             style={{ width: "100%" }}
             onChange={e => props.update_curr_form("distance", e)}
           >
-            <Option value="500">5 mi</Option>
-            <Option value="1000">10 mi</Option>
-            <Option value="1500">15 mi</Option>
-            <Option value="2000">20 mi</Option>
-            <Option value="4000">40 mi</Option>
-            <Option value="6000">60 mi</Option>
-            <Option value="1000000">100 mi</Option>
+            <Option value="1600">1 mi</Option>
+            <Option value="8000">5 mi</Option>
+            <Option value="16000">10 mi</Option>
+            <Option value="25100">15 mi</Option>
+            <Option value="32200">20 mi</Option>
+            <Option value="40000">25 mi</Option>
           </Select>
         </Col>
       </Row>
@@ -78,6 +77,7 @@ const SearchForm = props => {
             shape="round"
             size={"large"}
             style={{ width: "100%" }}
+            onClick={e => props.submit_curr_form()}
           >
             Find
           </Button>
