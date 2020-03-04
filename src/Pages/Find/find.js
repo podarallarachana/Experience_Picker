@@ -171,7 +171,14 @@ class Find extends React.Component {
     return (
       <div>
         <Nav selected="find" />
-        <div style={{ padding: "0 50px" }}>
+        <div>
+          <img
+            alt=""
+            src={process.env.PUBLIC_URL + "/images/orange_abstract.svg"}
+          />
+          HI
+        </div>
+        <div style={{ padding: "0 10px" }}>
           <SearchForm
             curr_form={this.state.curr_form}
             update_curr_form={this.update_curr_form}

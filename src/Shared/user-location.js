@@ -54,11 +54,7 @@ const UserLocation = props => {
   return (
     <Row gutter={[16, 16]} type="flex" justify="center">
       <Col xs={24} sm={24} md={12} lg={10} xl={10}>
-        <Form.Item
-          label="Address"
-          help="*enter address if location services unavailable!"
-          validateStatus={state.val_status}
-        >
+        <Form.Item label="Address" validateStatus={state.val_status}>
           <PlacesAutocomplete
             value={state.address}
             onChange={handleChange}

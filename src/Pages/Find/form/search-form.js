@@ -35,8 +35,22 @@ const SearchForm = props => {
   // const [search_by, setSearchBy] = useState("");
 
   return (
-    <Card>
-      <UserLocation />
+    <Card style={{ backgroundColor: "grey" }}>
+      <Row gutter={[16, 16]} type="flex" justify="center">
+        <Col xs={24} sm={24} md={12} lg={10} xl={10}>
+          <Tabs defaultActiveKey="1">
+            <TabPane tab=" Restaurants" key="1">
+              <Restaurant curr_form={props.curr_form} />
+            </TabPane>
+            <TabPane tab="Recreational" key="2">
+              <Recreational />
+            </TabPane>
+            <TabPane tab="Events" key="3">
+              <Events />
+            </TabPane>
+          </Tabs>
+        </Col>
+      </Row>
       <Row gutter={[16, 16]} type="flex" justify="center">
         <Col xs={24} sm={24} md={12} lg={10} xl={10}>
           <h4>Distance</h4>
@@ -55,23 +69,7 @@ const SearchForm = props => {
           </Select>
         </Col>
       </Row>
-      <Row gutter={[16, 16]} type="flex" justify="center">
-        <Col xs={24} sm={24} md={12} lg={10} xl={10}>
-          <Tabs defaultActiveKey="1">
-            <TabPane tab=" Restaurants" key="1">
-              <Restaurant curr_form={props.curr_form} />
-            </TabPane>
-            <TabPane tab="Recreational" key="2">
-              <Recreational />
-            </TabPane>
-            <TabPane tab="Events" key="3">
-              <Events />
-            </TabPane>
-          </Tabs>
-        </Col>
-      </Row>
-      <br />
-      <br />
+      <UserLocation />
       <Row gutter={[16, 16]} type="flex" justify="center">
         <Col xs={24} sm={24} md={12} lg={10} xl={10}>
           <Button

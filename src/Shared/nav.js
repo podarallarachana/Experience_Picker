@@ -16,7 +16,7 @@ const Nav = props => {
 
   return (
     <div>
-      <Header style={{ background: "#fff" }}>
+      <Header style={{ background: "#fff", padding: "0 10px", height: "60px" }}>
         <Menu
           onClick={e =>
             actions({
