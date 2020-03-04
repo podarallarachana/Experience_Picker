@@ -58,6 +58,7 @@ const UserLocation = props => {
           label="Address"
           help="*enter address if location services unavailable!"
           validateStatus={state.val_status}
+          hasFeedback={state.val_status === "validating" ? true : false}
         >
           <PlacesAutocomplete
             value={state.address}
@@ -79,6 +80,7 @@ const UserLocation = props => {
                     placeholder: state.address,
                     className: "location-search-input"
                   })}
+                  disabled={state.address === "loading..." ? true : false}
                 />
 
                 <div className="autocomplete-dropdown-container">

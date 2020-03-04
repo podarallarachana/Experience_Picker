@@ -7,6 +7,7 @@ import FindResults from "./results";
 import axios from "axios";
 import { Pagination, Row } from "antd";
 
+// DATA IS EITHER FETCHED ON FORM SUBMIT, NEW PAGE(PAGINATION) CLICK, OR BUSINESS CARD CLICK
 class Find extends React.Component {
   constructor(props) {
     super(props);
@@ -140,17 +141,7 @@ class Find extends React.Component {
     );
   };
 
-  //UPDATES FORM VALUES FROM CHILD COMPONENTS
-  update_curr_form = (prop, value) => {
-    this.setState({
-      curr_form: {
-        ...this.state.curr_form,
-        [prop]: value
-      }
-    });
-  };
-
-  //FETCHES NEW DATA AGAIN WHEN PAGE NUM CHANGES
+  //FETCHES DATA WITH OFFSET WHEN PAGE NUM CHANGES (PAGINATION)
   handlePagination = pageNumber => {
     this.setState(
       {
@@ -165,6 +156,16 @@ class Find extends React.Component {
     );
   };
 
+  //UPDATES FORM VALUES FROM CHILD COMPONENTS
+  update_curr_form = (prop, value) => {
+    this.setState({
+      curr_form: {
+        ...this.state.curr_form,
+        [prop]: value
+      }
+    });
+  };
+
   render() {
     return (
       <div>
@@ -177,7 +178,7 @@ class Find extends React.Component {
           />
           <br />
           <Row gutter={[16, 16]} type="flex" justify="center">
-            {this.state.curr_form.detail === -1 ? (
+            {this.state.curr_form.detail === -1 ? ( //SHOW MAIN DATA PAGE OR BUESINESS DETAILS
               <FindResults
                 curr_form={this.state.curr_form}
                 get_details={this.get_details}
@@ -188,10 +189,11 @@ class Find extends React.Component {
             {this.state.curr_form.results !== null && //RAN INTO ERROR FETCHING RESULTS
             this.state.curr_form.results !== undefined && //USER JUST ENTERED PAGE
             this.state.curr_form.is_loading === false && //IS NOT LOADING
+            this.state.curr_form.detail === -1 && //NOT DETAILS PAGE
             this.state.curr_form.results.data.businesses.length > 0 ? ( //RESULTS ARE NOT EMPTY
               <Pagination //IF ALL CHECKS PASS, ONLY THEN SHOW PAGINATION STUFF
                 total={
-                  this.state.curr_form.results.data.total > 999
+                  this.state.curr_form.results.data.total > 999 //YELP ONLY ALLOWS 1000 ITEMS RETURN PER QUERY
                     ? 999
                     : this.state.curr_form.results.data.total
                 }

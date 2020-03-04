@@ -6,7 +6,7 @@ const useGlobalState = () => {
     lat: "-1",
     long: "-1",
     address: "loading...",
-    val_status: "warning"
+    val_status: "validating"
   });
 
   const actions = action => {
