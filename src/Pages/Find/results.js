@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Card, Col } from "antd";
 import Context from "../../Store/context";
+import { Link } from "react-router-dom";
 
 const FindResults = props => {
   const { state } = useContext(Context);
@@ -19,7 +20,9 @@ const FindResults = props => {
         return props.curr_form.results.data.businesses.map(business => {
           return (
             <Col xs={24} sm={24} md={12} lg={8} xl={8} key={business.id}>
-              <Card>{business.name}</Card>
+              <Link to={"/details/" + business.id}>
+                <Card>{business.name}</Card>
+              </Link>
             </Col>
           );
         });
