@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Card } from "antd";
+import { Card, Col } from "antd";
 import Context from "../../Store/context";
 
 const FindResults = props => {
@@ -17,7 +17,11 @@ const FindResults = props => {
         return <h1>No search results, broaden your params</h1>;
       } else {
         return props.curr_form.results.data.businesses.map(business => {
-          return <Card key={business.id}>{business.name}</Card>;
+          return (
+            <Col xs={24} sm={24} md={12} lg={8} xl={8} key={business.id}>
+              <Card>{business.name}</Card>
+            </Col>
+          );
         });
       }
     }

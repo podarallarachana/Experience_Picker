@@ -5,7 +5,7 @@ import "./find.scss";
 import Context from "../../Store/context";
 import FindResults from "./results";
 import axios from "axios";
-import { Pagination } from "antd";
+import { Pagination, Row } from "antd";
 
 class Find extends React.Component {
   constructor(props) {
@@ -104,7 +104,6 @@ class Find extends React.Component {
   };
 
   handlePagination = pageNumber => {
-    console.log(pageNumber);
     this.setState(
       {
         curr_form: {
@@ -129,25 +128,27 @@ class Find extends React.Component {
             submit_curr_form={this.submit_curr_form}
           />
           <br />
-          <FindResults curr_form={this.state.curr_form} />
-          {this.state.curr_form.results !== null &&
-          this.state.curr_form.results !== undefined &&
-          this.state.curr_form.is_loading === false &&
-          this.state.curr_form.results.data.businesses.length > 0 ? (
-            <Pagination
-              total={
-                this.state.curr_form.results.data.total > 999
-                  ? 999
-                  : this.state.curr_form.results.data.total
-              }
-              showTotal={total => `Total ${total} items`}
-              pageSize={50}
-              defaultCurrent={this.state.curr_form.pageNum}
-              onChange={this.handlePagination}
-            />
-          ) : (
-            ""
-          )}
+          <Row gutter={[16, 16]} type="flex" justify="center">
+            <FindResults curr_form={this.state.curr_form} />
+            {this.state.curr_form.results !== null &&
+            this.state.curr_form.results !== undefined &&
+            this.state.curr_form.is_loading === false &&
+            this.state.curr_form.results.data.businesses.length > 0 ? (
+              <Pagination
+                total={
+                  this.state.curr_form.results.data.total > 999
+                    ? 999
+                    : this.state.curr_form.results.data.total
+                }
+                showTotal={total => `Total ${total} items`}
+                pageSize={50}
+                defaultCurrent={this.state.curr_form.pageNum}
+                onChange={this.handlePagination}
+              />
+            ) : (
+              ""
+            )}
+          </Row>
         </div>
       </div>
     );
