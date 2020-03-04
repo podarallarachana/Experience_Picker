@@ -10,8 +10,9 @@ class Find extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      is_loading: false,
       curr_form: {
+        is_loading: false,
+
         distance: "40000",
 
         res_category: "banana",
@@ -30,9 +31,10 @@ class Find extends React.Component {
         ev_available: "",
         ev_free: "",
 
-        search_by: ""
-      },
-      results: undefined
+        search_by: "",
+
+        results: undefined
+      }
     };
   }
 
@@ -54,14 +56,20 @@ class Find extends React.Component {
       )
       .then(res => {
         this.setState({
-          results: res,
-          is_loading: false
+          curr_form: {
+            ...this.state.curr_form,
+            results: res,
+            is_loading: false
+          }
         });
       })
       .catch(err => {
         this.setState({
-          results: null,
-          is_loading: false
+          curr_form: {
+            ...this.state.curr_form,
+            results: null,
+            is_loading: false
+          }
         });
       });
   };
@@ -70,9 +78,14 @@ class Find extends React.Component {
     if (this.context.state.val_status === "success") {
       this.setState(
         {
-          is_loading: true
+          curr_form: {
+            ...this.state.curr_form,
+            is_loading: true
+          }
         },
-        () => this.fetchData()
+        () => {
+          this.fetchData();
+        }
       );
     }
   };
@@ -80,6 +93,7 @@ class Find extends React.Component {
   update_curr_form = (prop, value) => {
     this.setState({
       curr_form: {
+        ...this.state.curr_form,
         [prop]: value
       }
     });
@@ -96,11 +110,7 @@ class Find extends React.Component {
             submit_curr_form={this.submit_curr_form}
           />
           <br />
-          <FindResults
-            curr_form={this.state.curr_form}
-            results={this.state.results}
-            is_loading={this.state.is_loading}
-          />
+          <FindResults curr_form={this.state.curr_form} />
         </div>
       </div>
     );

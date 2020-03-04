@@ -1,14 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Row, Col, Tabs, Card, Select, Button } from "antd";
 import UserLocation from "../../Shared/user-location";
 import Restaurant from "./restaurant";
 import Recreational from "./recreational";
 import Events from "./events";
+import Context from "../../Store/context";
 // import categories from "../Shared/categories-data";
 const { Option } = Select;
 const { TabPane } = Tabs;
 
 const SearchForm = props => {
+  const { state } = useContext(Context);
   // const [latitude, setLatitude] = useState("");
   // const [longitude, setLongitude] = useState("");
   // const [address, setAddress] = useState("");
@@ -78,6 +80,7 @@ const SearchForm = props => {
             size={"large"}
             style={{ width: "100%" }}
             onClick={e => props.submit_curr_form()}
+            disabled={state.val_status === "success" ? false : true}
           >
             Find
           </Button>

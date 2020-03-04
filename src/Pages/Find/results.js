@@ -6,17 +6,17 @@ const FindResults = props => {
   const { state } = useContext(Context);
 
   function displayResults() {
-    if (props.is_loading) {
+    if (props.curr_form.is_loading) {
       return <h1>LOADING</h1>;
     } else {
-      if (props.results === undefined) {
+      if (props.curr_form.results === undefined) {
         return <h1>Search for info</h1>;
-      } else if (props.results === null) {
+      } else if (props.curr_form.results === null) {
         return <h1>Error fetching data, try again!</h1>;
-      } else if (props.results.data.businesses.length === 0) {
+      } else if (props.curr_form.results.data.businesses.length === 0) {
         return <h1>No search results, broaden your params</h1>;
       } else {
-        return props.results.data.businesses.map(business => {
+        return props.curr_form.results.data.businesses.map(business => {
           return <Card key={business.id}>{business.name}</Card>;
         });
       }
