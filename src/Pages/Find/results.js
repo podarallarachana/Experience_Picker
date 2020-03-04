@@ -20,11 +20,11 @@ const FindResults = props => {
         return props.curr_form.results.data.businesses.map(business => {
           return (
             <Col
-              xs={24}
-              sm={24}
-              md={12}
-              lg={8}
-              xl={8}
+              xs={{ span: 24 }}
+              sm={{ span: 24 }}
+              md={{ span: 12 }}
+              lg={{ span: 12 }}
+              xl={{ span: 8 }}
               key={business.id}
               onClick={() => {
                 props.get_details(business.id);

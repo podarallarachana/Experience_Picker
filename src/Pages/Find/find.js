@@ -184,8 +184,12 @@ class Find extends React.Component {
                 get_details={this.get_details}
               />
             ) : (
-              <h1>YES</h1>
+              <col>
+                <h1>YES</h1>
+              </col>
             )}
+          </Row>
+          <Row gutter={[16, 16]} type="flex" justify="center">
             {this.state.curr_form.results !== null && //RAN INTO ERROR FETCHING RESULTS
             this.state.curr_form.results !== undefined && //USER JUST ENTERED PAGE
             this.state.curr_form.is_loading === false && //IS NOT LOADING

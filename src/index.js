@@ -7,19 +7,19 @@ import { ApolloProvider } from "@apollo/react-hooks";
 import ApolloClient from "apollo-boost";
 require("dotenv").config();
 
-const client = new ApolloClient({
-  uri: `${"https://cors-anywhere.herokuapp.com/"}https://api.yelp.com/v3/graphql`,
-  request: operation => {
-    operation.setContext({
-      headers: {
-        authorization: process.env.REACT_APP_YELP_KEY,
-        "Accept-Language": "en-US"
-      }
-    });
-  }
-});
-
 const Index = () => {
+  const client = new ApolloClient({
+    uri: `${"https://cors-anywhere.herokuapp.com/"}https://api.yelp.com/v3/graphql`,
+    request: operation => {
+      operation.setContext({
+        headers: {
+          authorization: process.env.REACT_APP_YELP_KEY,
+          "Accept-Language": "en-US"
+        }
+      });
+    }
+  });
+
   const store = useGlobalState();
   return (
     <ApolloProvider client={client}>

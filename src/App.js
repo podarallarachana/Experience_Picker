@@ -8,50 +8,50 @@ import Recommended from "./Pages/Recommended/recommended";
 import Context from "./Store/context";
 import Geocode from "react-geocode";
 
-Geocode.setApiKey(process.env.REACT_APP_GOOGLE_KEY);
-Geocode.setLanguage("en");
-
-let lat = "-1";
-let long = "-1";
-let address = "";
-let val_status = "";
-
-function getLocation(callback) {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(
-      function(position) {
-        lat = position.coords.latitude;
-        long = position.coords.longitude;
-
-        // Get address from latidude & longitude.
-        Geocode.fromLatLng(lat, long).then(
-          response => {
-            address = response.results[0].formatted_address;
-            val_status = "success";
-            callback();
-          },
-          error => {
-            address = "please enter address, unable to get location!";
-            val_status = "warning";
-            callback();
-          }
-        );
-      },
-      function(error) {
-        address = "please enter address, unable to get location!";
-        val_status = "warning";
-        callback();
-      }
-    );
-  } else {
-    address = "please enter address, unable to get location!";
-    val_status = "warning";
-    callback();
-  }
-}
-
 const App = props => {
   const { state, actions } = useContext(Context);
+
+  Geocode.setApiKey(process.env.REACT_APP_GOOGLE_KEY);
+  Geocode.setLanguage("en");
+
+  let lat = "-1";
+  let long = "-1";
+  let address = "";
+  let val_status = "";
+
+  function getLocation(callback) {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        function(position) {
+          lat = position.coords.latitude;
+          long = position.coords.longitude;
+
+          // Get address from latidude & longitude.
+          Geocode.fromLatLng(lat, long).then(
+            response => {
+              address = response.results[0].formatted_address;
+              val_status = "success";
+              callback();
+            },
+            error => {
+              address = "please enter address, unable to get location!";
+              val_status = "warning";
+              callback();
+            }
+          );
+        },
+        function(error) {
+          address = "please enter address, unable to get location!";
+          val_status = "warning";
+          callback();
+        }
+      );
+    } else {
+      address = "please enter address, unable to get location!";
+      val_status = "warning";
+      callback();
+    }
+  }
 
   useEffect(() => {
     //get current page
