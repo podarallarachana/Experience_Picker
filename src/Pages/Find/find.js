@@ -135,10 +135,14 @@ class Find extends React.Component {
           this.state.curr_form.is_loading === false &&
           this.state.curr_form.results.data.businesses.length > 0 ? (
             <Pagination
-              total={this.state.curr_form.results.data.total}
+              total={
+                this.state.curr_form.results.data.total > 999
+                  ? 999
+                  : this.state.curr_form.results.data.total
+              }
               showTotal={total => `Total ${total} items`}
               pageSize={50}
-              defaultCurrent={this.state.pageNum}
+              defaultCurrent={this.state.curr_form.pageNum}
               onChange={this.handlePagination}
             />
           ) : (
