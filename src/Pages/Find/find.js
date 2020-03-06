@@ -5,7 +5,7 @@ import "./find.scss";
 import Context from "../../Store/context";
 import FindResults from "./results";
 import axios from "axios";
-import { Pagination, Row } from "antd";
+import { Pagination, Row, List } from "antd";
 import Details from "../../Shared/details";
 
 // DATA IS EITHER FETCHED ON FORM SUBMIT, NEW PAGE(PAGINATION) CLICK, OR BUSINESS CARD CLICK
@@ -178,19 +178,23 @@ class Find extends React.Component {
         />
         <div style={{ padding: "0 10px" }}>
           <br />
-          <Row gutter={[16, 16]} type="flex" justify="center">
-            {this.state.curr_form.detail === -1 ? ( //SHOW MAIN DATA PAGE OR BUESINESS DETAILS
-              <FindResults
-                curr_form={this.state.curr_form}
-                get_details={this.get_details}
-              />
-            ) : (
-              <Details
-                curr_form={this.state.curr_form}
-                update_curr_form={this.update_curr_form}
-              />
-            )}
-          </Row>
+          <List>
+            <Row gutter={[16, 16]}>
+              {this.state.curr_form.detail === -1 ? ( //SHOW MAIN DATA PAGE OR BUESINESS DETAILS
+                <FindResults
+                  curr_form={this.state.curr_form}
+                  get_details={this.get_details}
+                />
+              ) : (
+                <Details
+                  curr_form={this.state.curr_form}
+                  update_curr_form={this.update_curr_form}
+                />
+              )}
+            </Row>
+          </List>
+          <br />
+          <br />
           <Row gutter={[16, 16]} type="flex" justify="center">
             {this.state.curr_form.results !== null && //RAN INTO ERROR FETCHING RESULTS
             this.state.curr_form.results !== undefined && //USER JUST ENTERED PAGE
@@ -213,6 +217,8 @@ class Find extends React.Component {
             )}
           </Row>
         </div>
+        <br />
+        <br />
       </div>
     );
   }

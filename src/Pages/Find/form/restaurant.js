@@ -16,10 +16,14 @@ const { TreeNode } = TreeSelect;
 const Restaurant = props => {
   return (
     <div>
-      <h4>Location</h4>
+      <h4>
+        <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;&nbsp;Location
+      </h4>
       <UserLocation />
       <br />
-      <h4>Category</h4>
+      <h4>
+        <i className="fa fa-yelp" aria-hidden="true"></i>&nbsp;&nbsp;Category
+      </h4>
       <TreeSelect
         showSearch
         style={{ width: "100%" }}
