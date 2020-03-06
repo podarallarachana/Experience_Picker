@@ -7,6 +7,20 @@ import SurpiseMe from "./Pages/SurpriseMe/surprise";
 import Recommended from "./Pages/Recommended/recommended";
 import Context from "./Store/context";
 import Geocode from "react-geocode";
+import { ApolloProvider } from "react-apollo";
+import ApolloClient from "apollo-boost";
+
+const client = new ApolloClient({
+  uri: `${"https://cors-anywhere.herokuapp.com/"}https://api.yelp.com/v3/graphql`,
+  request: operation => {
+    operation.setContext({
+      headers: {
+        authorization: process.env.REACT_APP_YELP_KEY,
+        "Accept-Language": "en-US"
+      }
+    });
+  }
+});
 
 const App = props => {
   const { state, actions } = useContext(Context);
@@ -77,16 +91,18 @@ const App = props => {
   }, []);
 
   return (
-    <BrowserRouter>
-      <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/about" exact component={About} />
-        <Route path="/find" exact component={Find} />
-        <Route path="/recommended" exact component={Recommended} />
-        <Route path="/surpriseme" exact component={SurpiseMe} />
-        <Route path="/" render={() => <div>404</div>} />
-      </Switch>
-    </BrowserRouter>
+    <ApolloProvider client={client}>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/about" exact component={About} />
+          <Route path="/find" exact component={Find} />
+          <Route path="/recommended" exact component={Recommended} />
+          <Route path="/surpriseme" exact component={SurpiseMe} />
+          <Route path="/" render={() => <div>404</div>} />
+        </Switch>
+      </BrowserRouter>
+    </ApolloProvider>
   );
 };
 

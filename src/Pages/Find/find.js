@@ -171,19 +171,12 @@ class Find extends React.Component {
     return (
       <div>
         <Nav selected="find" />
-        <div>
-          <img
-            alt=""
-            src={process.env.PUBLIC_URL + "/images/orange_abstract.svg"}
-          />
-          HI
-        </div>
+        <SearchForm
+          curr_form={this.state.curr_form}
+          update_curr_form={this.update_curr_form}
+          submit_curr_form={this.submit_curr_form}
+        />
         <div style={{ padding: "0 10px" }}>
-          <SearchForm
-            curr_form={this.state.curr_form}
-            update_curr_form={this.update_curr_form}
-            submit_curr_form={this.submit_curr_form}
-          />
           <br />
           <Row gutter={[16, 16]} type="flex" justify="center">
             {this.state.curr_form.detail === -1 ? ( //SHOW MAIN DATA PAGE OR BUESINESS DETAILS

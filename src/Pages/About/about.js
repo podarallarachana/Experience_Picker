@@ -1,9 +1,7 @@
 import React from "react";
 import Nav from "../../Shared/nav";
-import Context from "../../Store/context";
 
 class About extends React.Component {
-  static contextType = Context;
   render() {
     return (
       <div className="App">
@@ -13,7 +11,6 @@ class About extends React.Component {
     );
   }
 }
-About.contextType = Context;
 
 // export default graphql(getQuery)(About);
 export default About;

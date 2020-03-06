@@ -4,3 +4,17 @@
   border: 3px solid green;
   padding: 10px;
 }
+
+.FindHeader {
+  background-image: url("/images/find_header.jpg");
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.FindFormArea {
+  padding: 50px 50px;
+}
