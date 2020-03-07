@@ -170,7 +170,7 @@ class Find extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="find-container" style={{ backgroundColor: "#f1f1f1" }}>
         <Nav selected="find" />
         <SearchForm
           curr_form={this.state.curr_form}
@@ -179,7 +179,7 @@ class Find extends React.Component {
         />
         <div style={{ padding: "50px 50px" }}>
           <List>
-            <Row gutter={[16, 16]} justify="center">
+            <Row gutter={[20, 20]} justify="center">
               {this.state.curr_form.detail === -1 ? ( //SHOW MAIN DATA PAGE OR BUESINESS DETAILS
                 <FindResults
                   curr_form={this.state.curr_form}

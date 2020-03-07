@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Card, Col, Avatar, List } from "antd";
+import { Card, Col, Avatar, Button, List } from "antd";
 import Context from "../../Store/context";
 import { Link } from "react-router-dom";
 import {
@@ -16,29 +16,59 @@ const { Meta } = Card;
 const FindResults = props => {
   const { state } = useContext(Context);
 
-  const getDescription = (rating, category, price) => {
-    let price_s = "";
-    let rating_s = "";
-
-    if (price === "$") {
-      price_s = "economic";
-    } else if (price === "$$") {
-      price_s = "a good deal";
-    } else if (price === "$$$") {
-      price_s = "expensive";
-    } else if (price === "$$$$") {
-      price_s = "very expensive";
-    }
-
-    if (rating < 2) {
-      rating_s = "suspicious ratings";
-    } else if (rating < 3) {
-      rating_s = "good ratings";
+  const getDollars = (price, name) => {
+    if (price) {
+      const n = price.length;
+      return (
+        <p>
+          {[...Array(n)].map((e, i) => (
+            <i
+              key={i}
+              className="fa fa-usd"
+              aria-hidden="true"
+              style={{ color: "#1DA57A" }}
+            ></i>
+          ))}{" "}
+          {name}
+        </p>
+      );
     } else {
-      rating_s = "amazing ratings";
+      return <p>{name}</p>;
     }
+  };
 
-    return category + ", " + rating_s + ", " + price_s;
+  const getStars = rating => {
+    if (rating) {
+      var hasHalf = false;
+      var n = rating;
+      if (rating % 1 !== 0) {
+        n = parseInt(Math.floor(rating));
+        hasHalf = true;
+      }
+      return (
+        <p>
+          {[...Array(n)].map((e, i) => (
+            <i
+              key={i}
+              className="fa fa-star"
+              aria-hidden="true"
+              style={{ color: "#ffec3d" }}
+            ></i>
+          ))}
+          {hasHalf ? (
+            <i
+              className="fa fa-star-half-o"
+              aria-hidden="true"
+              style={{ color: "#ffec3d" }}
+            ></i>
+          ) : (
+            ""
+          )}
+        </p>
+      );
+    } else {
+      return rating;
+    }
   };
 
   function displayResults() {
@@ -67,8 +97,15 @@ const FindResults = props => {
               }}
             >
               <List.Item>
-                <Card style={{ width: "100%", border: "0px", outline: "0px" }}>
-                  <div class="dark-img">
+                <div
+                  className="detail-card"
+                  style={{
+                    width: "100%",
+                    backgroundColor: "#fff"
+                  }}
+                >
+                  <br />
+                  <div className="detail-img">
                     <img
                       height="130px"
                       width="130px"
@@ -77,20 +114,34 @@ const FindResults = props => {
                     />
                   </div>
                   <br />
-                  <div style={{ height: "90px", textAlign: "center" }}>
-                    <h3>
-                      <i class="fa fa-yelp" aria-hidden="true"></i>&nbsp;&nbsp;
-                      {business.name}
-                    </h3>
-                    <p>
-                      {getDescription(
-                        business.rating,
-                        business.categories[0].title,
-                        business.price
-                      )}
-                    </p>
+                  <div
+                    className="detail-description"
+                    style={{
+                      textAlign: "center",
+                      padding: "0px 20px",
+                      height: "50px",
+                      textOverflow: "ellipsis"
+                    }}
+                  >
+                    {getDollars(business.price, business.name)}
+
+                    {getStars(business.rating)}
+
+                    <br />
                   </div>
-                </Card>
+                  <br />
+                  <div style={{ padding: "0px 50px 20px 50px" }}>
+                    <Avatar
+                      size="small"
+                      icon={<i className="fa fa-yelp" aria-hidden="true"></i>}
+                    />
+                    &nbsp;&nbsp;
+                    <Avatar
+                      size="small"
+                      icon={<i className="fa fa-yelp" aria-hidden="true"></i>}
+                    />
+                  </div>
+                </div>
               </List.Item>
             </Col>
           );
