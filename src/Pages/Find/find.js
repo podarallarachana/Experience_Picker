@@ -176,10 +176,9 @@ class Find extends React.Component {
           update_curr_form={this.update_curr_form}
           submit_curr_form={this.submit_curr_form}
         />
-        <div style={{ padding: "0 10px" }}>
-          <br />
+        <div style={{ padding: "50px 50px" }}>
           <List>
-            <Row gutter={[16, 16]}>
+            <Row gutter={[10, 10]} justify="center">
               {this.state.curr_form.detail === -1 ? ( //SHOW MAIN DATA PAGE OR BUESINESS DETAILS
                 <FindResults
                   curr_form={this.state.curr_form}
@@ -207,7 +206,7 @@ class Find extends React.Component {
                     ? 999
                     : this.state.curr_form.results.data.total
                 }
-                showTotal={total => `Total ${total} items`}
+                simple
                 pageSize={50}
                 defaultCurrent={this.state.curr_form.pageNum}
                 onChange={this.handlePagination}
@@ -217,8 +216,6 @@ class Find extends React.Component {
             )}
           </Row>
         </div>
-        <br />
-        <br />
       </div>
     );
   }

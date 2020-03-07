@@ -19,18 +19,18 @@
   padding: 50px 50px;
 }
 
-.container {
-  background-color: red;
-  width: 100%;
-  padding-top: 100%; /* 1:1 Aspect Ratio */
-  position: relative; /* If you want text inside of it */
+img {
+  background-color: "#f1f1f1";
 }
 
-/* If you want text inside of the container */
-.text {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+.detailCard {
+  height: 230px;
+  width: 100%;
+  background-color: red;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
