@@ -32,7 +32,7 @@ class Find extends React.Component {
         pageNum: 1,
         results: undefined,
         offset: 0,
-        detail: -1,
+        detail: -1, //IF -1, DON'T SHOW DETAILS, ELSE SHOW DETAILS (WILL CONTAIN KEY OF DETAILS OTHERWISE)
         detail_results: undefined
       }
     };
@@ -109,7 +109,7 @@ class Find extends React.Component {
       });
   };
 
-  //FETCHES DATA ON SUBMIT
+  //FETCHES DATA ON SUBMIT (if location is correct) AND IF ON DETAILS PAGE, SET IT TO -1 AGAIN TO REMOVE DETAILS
   submit_curr_form = () => {
     if (this.context.state.val_status === "success") {
       this.setState(
@@ -118,7 +118,8 @@ class Find extends React.Component {
             ...this.state.curr_form,
             is_loading: true,
             offset: 0,
-            pageNum: 1
+            pageNum: 1,
+            detail: -1
           }
         },
         () => {
@@ -178,7 +179,7 @@ class Find extends React.Component {
         />
         <div style={{ padding: "50px 50px" }}>
           <List>
-            <Row gutter={[10, 10]} justify="center">
+            <Row gutter={[16, 16]} justify="center">
               {this.state.curr_form.detail === -1 ? ( //SHOW MAIN DATA PAGE OR BUESINESS DETAILS
                 <FindResults
                   curr_form={this.state.curr_form}

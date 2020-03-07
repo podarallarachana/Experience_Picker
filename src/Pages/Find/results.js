@@ -23,7 +23,7 @@ const FindResults = props => {
     if (price === "$") {
       price_s = "economic";
     } else if (price === "$$") {
-      price_s = "good deal";
+      price_s = "a good deal";
     } else if (price === "$$$") {
       price_s = "expensive";
     } else if (price === "$$$$") {
@@ -56,10 +56,10 @@ const FindResults = props => {
           return (
             <Col
               xs={{ span: 24 }}
-              sm={{ span: 24 }}
-              md={{ span: 12 }}
-              lg={{ span: 8 }}
-              xl={{ span: 6 }}
+              sm={{ span: 12 }}
+              md={{ span: 8 }}
+              lg={{ span: 6 }}
+              xl={{ span: 4 }}
               xxl={{ span: 4 }}
               key={business.id}
               onClick={() => {
@@ -67,29 +67,29 @@ const FindResults = props => {
               }}
             >
               <List.Item>
-                <Card
-                  style={{ width: "100%" }}
-                  actions={[
-                    <AntdIcon type={TwitterOutline} />,
-                    <AntdIcon type={TwitterOutline} />
-                  ]}
-                >
-                  {" "}
-                  <Meta
-                    avatar={
-                      business.image_url ? (
-                        <Avatar src={business.image_url} />
-                      ) : (
-                        <Avatar icon={<AntdIcon type={TwitterOutline} />} />
-                      )
-                    }
-                    title={business.name}
-                    description={getDescription(
-                      business.rating,
-                      business.categories[0].title,
-                      business.price
-                    )}
-                  />
+                <Card style={{ width: "100%", border: "0px", outline: "0px" }}>
+                  <div class="dark-img">
+                    <img
+                      height="130px"
+                      width="130px"
+                      alt="example"
+                      src={business.image_url}
+                    />
+                  </div>
+                  <br />
+                  <div style={{ height: "90px", textAlign: "center" }}>
+                    <h3>
+                      <i class="fa fa-yelp" aria-hidden="true"></i>&nbsp;&nbsp;
+                      {business.name}
+                    </h3>
+                    <p>
+                      {getDescription(
+                        business.rating,
+                        business.categories[0].title,
+                        business.price
+                      )}
+                    </p>
+                  </div>
                 </Card>
               </List.Item>
             </Col>
