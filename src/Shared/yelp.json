@@ -1,0 +1,1964 @@
+{
+  "event_cats": [
+    { "title": "Music", "alias": "music" },
+    { "title": "Visual Arts", "alias": "visual-arts" },
+    { "title": "Performing Arts", "alias": "performing-arts" },
+    { "title": "Film", "alias": "film" },
+    { "title": "Lectures & Books", "alias": "lectures-books" },
+    { "title": "Fashion", "alias": "fashion" },
+    { "title": "Food & Drink", "alias": "food-and-drink" },
+    { "title": "Festivals & Fairs", "alias": "festivals-fairs" },
+    { "title": "Charities", "alias": "charities" },
+    { "title": "Sports & Active Life", "alias": "sports-active-life" },
+    { "title": "Nightlife", "alias": "nightlife" },
+    { "title": "Kids & Family", "alias": "kids-family" },
+    { "title": "Other ", "alias": "other" }
+  ],
+  "restaurant_cats": [
+    {
+      "title": "Food",
+      "alias": "food",
+      "cats": [
+        {
+          "title": "Acai Bowls",
+          "alias": "acaibowls",
+          "subcats": []
+        },
+        {
+          "title": "Bagels",
+          "alias": "bagels",
+          "subcats": []
+        },
+        {
+          "title": "Bakeries",
+          "alias": "bakeries",
+          "subcats": []
+        },
+        {
+          "title": "Beer, Wine & Spirits",
+          "alias": "beer_and_wine",
+          "subcats": []
+        },
+        {
+          "title": "Beverage Store",
+          "alias": "beverage_stores",
+          "subcats": []
+        },
+        {
+          "title": "Breweries",
+          "alias": "breweries",
+          "subcats": [
+            {
+              "title": "Brewpubs",
+              "alias": "brewpubs"
+            }
+          ]
+        },
+        {
+          "title": "Bubble Tea",
+          "alias": "bubbletea",
+          "subcats": []
+        },
+        {
+          "title": "Butcher",
+          "alias": "butcher",
+          "subcats": []
+        },
+        {
+          "title": "CSA",
+          "alias": "csa",
+          "subcats": []
+        },
+        {
+          "title": "Chimney Cakes",
+          "alias": "chimneycakes",
+          "subcats": []
+        },
+        {
+          "title": "Cideries",
+          "alias": "cideries",
+          "subcats": []
+        },
+        {
+          "title": "Coffee & Tea",
+          "alias": "coffee",
+          "subcats": []
+        },
+        {
+          "title": "Coffee Roasteries",
+          "alias": "coffeeroasteries",
+          "subcats": []
+        },
+        {
+          "title": "Convenience Stores",
+          "alias": "convenience",
+          "subcats": []
+        },
+        {
+          "title": "Cupcakes",
+          "alias": "cupcakes",
+          "subcats": []
+        },
+        {
+          "title": "Custom Cakes",
+          "alias": "customcakes",
+          "subcats": []
+        },
+        {
+          "title": "Desserts",
+          "alias": "desserts",
+          "subcats": []
+        },
+        {
+          "title": "Distilleries",
+          "alias": "distilleries",
+          "subcats": []
+        },
+        {
+          "title": "Do-It-Yourself Food",
+          "alias": "diyfood",
+          "subcats": []
+        },
+        {
+          "title": "Donuts",
+          "alias": "donuts",
+          "subcats": []
+        },
+        {
+          "title": "Empanadas",
+          "alias": "empanadas",
+          "subcats": []
+        },
+        {
+          "title": "Farmers Market",
+          "alias": "farmersmarket",
+          "subcats": []
+        },
+        {
+          "title": "Food Delivery Services",
+          "alias": "fooddeliveryservices",
+          "subcats": []
+        },
+        {
+          "title": "Food Trucks",
+          "alias": "foodtrucks",
+          "subcats": []
+        },
+        {
+          "title": "Gelato",
+          "alias": "gelato",
+          "subcats": []
+        },
+        {
+          "title": "Grocery",
+          "alias": "grocery",
+          "subcats": []
+        },
+        {
+          "title": "Honey",
+          "alias": "honey",
+          "subcats": []
+        },
+        {
+          "title": "Ice Cream & Frozen Yogurt",
+          "alias": "icecream",
+          "subcats": []
+        },
+        {
+          "title": "Imported Food",
+          "alias": "importedfood",
+          "subcats": []
+        },
+        {
+          "title": "International Grocery",
+          "alias": "intlgrocery",
+          "subcats": []
+        },
+        {
+          "title": "Internet Cafes",
+          "alias": "internetcafe",
+          "subcats": []
+        },
+        {
+          "title": "Juice Bars & Smoothies",
+          "alias": "juicebars",
+          "subcats": []
+        },
+        {
+          "title": "Kombucha",
+          "alias": "kombucha",
+          "subcats": []
+        },
+        {
+          "title": "Meaderies",
+          "alias": "meaderies",
+          "subcats": []
+        },
+        {
+          "title": "Organic Stores",
+          "alias": "organic_stores",
+          "subcats": []
+        },
+        {
+          "title": "Patisserie/Cake Shop",
+          "alias": "cakeshop",
+          "subcats": []
+        },
+        {
+          "title": "Piadina",
+          "alias": "piadina",
+          "subcats": []
+        },
+        {
+          "title": "Poke",
+          "alias": "poke",
+          "subcats": []
+        },
+        {
+          "title": "Pretzels",
+          "alias": "pretzels",
+          "subcats": []
+        },
+        {
+          "title": "Shaved Ice",
+          "alias": "shavedice",
+          "subcats": []
+        },
+        {
+          "title": "Shaved Snow",
+          "alias": "shavedsnow",
+          "subcats": []
+        },
+        {
+          "title": "Smokehouse",
+          "alias": "smokehouse",
+          "subcats": []
+        },
+        {
+          "title": "Specialty Food",
+          "alias": "gourmet",
+          "subcats": [
+            {
+              "title": "Candy Stores",
+              "alias": "candy"
+            },
+            {
+              "title": "Cheese Shops",
+              "alias": "cheese"
+            },
+            {
+              "title": "Chocolatiers & Shops",
+              "alias": "chocolate"
+            },
+            {
+              "title": "Fruits & Veggies",
+              "alias": "markets"
+            },
+            {
+              "title": "Health Markets",
+              "alias": "healthmarkets"
+            },
+            {
+              "title": "Herbs & Spices",
+              "alias": "herbsandspices"
+            },
+            {
+              "title": "Macarons",
+              "alias": "macarons"
+            },
+            {
+              "title": "Meat Shops",
+              "alias": "meats"
+            },
+            {
+              "title": "Olive Oil",
+              "alias": "oliveoil"
+            },
+            {
+              "title": "Pasta Shops",
+              "alias": "pastashops"
+            },
+            {
+              "title": "Popcorn Shops",
+              "alias": "popcorn"
+            },
+            {
+              "title": "Seafood Markets",
+              "alias": "seafoodmarkets"
+            }
+          ]
+        },
+        {
+          "title": "Street Vendors",
+          "alias": "streetvendors",
+          "subcats": []
+        },
+        {
+          "title": "Tea Rooms",
+          "alias": "tea",
+          "subcats": []
+        },
+        {
+          "title": "Water Stores",
+          "alias": "waterstores",
+          "subcats": []
+        },
+        {
+          "title": "Wineries",
+          "alias": "wineries",
+          "subcats": [
+            {
+              "title": "Wine Tasting Room",
+              "alias": "winetastingroom"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Restaurants",
+      "alias": "restaurants",
+      "cats": [
+        {
+          "title": "Afghan",
+          "alias": "afghani",
+          "subcats": []
+        },
+        {
+          "title": "African",
+          "alias": "african",
+          "subcats": [
+            {
+              "title": "Senegalese",
+              "alias": "senegalese"
+            },
+            {
+              "title": "South African",
+              "alias": "southafrican"
+            }
+          ]
+        },
+        {
+          "title": "American",
+          "alias": "newamerican",
+          "subcats": []
+        },
+        {
+          "title": "American",
+          "alias": "tradamerican",
+          "subcats": []
+        },
+        {
+          "title": "Arabian",
+          "alias": "arabian",
+          "subcats": []
+        },
+        {
+          "title": "Argentine",
+          "alias": "argentine",
+          "subcats": []
+        },
+        {
+          "title": "Armenian",
+          "alias": "armenian",
+          "subcats": []
+        },
+        {
+          "title": "Asian Fusion",
+          "alias": "asianfusion",
+          "subcats": []
+        },
+        {
+          "title": "Australian",
+          "alias": "australian",
+          "subcats": []
+        },
+        {
+          "title": "Austrian",
+          "alias": "austrian",
+          "subcats": []
+        },
+        {
+          "title": "Bangladeshi",
+          "alias": "bangladeshi",
+          "subcats": []
+        },
+        {
+          "title": "Barbeque",
+          "alias": "bbq",
+          "subcats": []
+        },
+        {
+          "title": "Basque",
+          "alias": "basque",
+          "subcats": []
+        },
+        {
+          "title": "Belgian",
+          "alias": "belgian",
+          "subcats": []
+        },
+        {
+          "title": "Brasseries",
+          "alias": "brasseries",
+          "subcats": []
+        },
+        {
+          "title": "Brazilian",
+          "alias": "brazilian",
+          "subcats": []
+        },
+        {
+          "title": "Breakfast & Brunch",
+          "alias": "breakfast_brunch",
+          "subcats": [
+            {
+              "title": "Pancakes",
+              "alias": "pancakes"
+            }
+          ]
+        },
+        {
+          "title": "British",
+          "alias": "british",
+          "subcats": []
+        },
+        {
+          "title": "Buffets",
+          "alias": "buffets",
+          "subcats": []
+        },
+        {
+          "title": "Bulgarian",
+          "alias": "bulgarian",
+          "subcats": []
+        },
+        {
+          "title": "Burgers",
+          "alias": "burgers",
+          "subcats": []
+        },
+        {
+          "title": "Burmese",
+          "alias": "burmese",
+          "subcats": []
+        },
+        {
+          "title": "Cafes",
+          "alias": "cafes",
+          "subcats": [
+            {
+              "title": "Themed Cafes",
+              "alias": "themedcafes"
+            }
+          ]
+        },
+        {
+          "title": "Cafeteria",
+          "alias": "cafeteria",
+          "subcats": []
+        },
+        {
+          "title": "Cajun/Creole",
+          "alias": "cajun",
+          "subcats": []
+        },
+        {
+          "title": "Cambodian",
+          "alias": "cambodian",
+          "subcats": []
+        },
+        {
+          "title": "Canadian",
+          "alias": "newcanadian",
+          "subcats": []
+        },
+        {
+          "title": "Canteen",
+          "alias": "canteen",
+          "subcats": []
+        },
+        {
+          "title": "Caribbean",
+          "alias": "caribbean",
+          "subcats": [
+            {
+              "title": "Dominican",
+              "alias": "dominican"
+            },
+            {
+              "title": "Haitian",
+              "alias": "haitian"
+            },
+            {
+              "title": "Puerto Rican",
+              "alias": "puertorican"
+            },
+            {
+              "title": "Trinidadian",
+              "alias": "trinidadian"
+            }
+          ]
+        },
+        {
+          "title": "Catalan",
+          "alias": "catalan",
+          "subcats": []
+        },
+        {
+          "title": "Cheesesteaks",
+          "alias": "cheesesteaks",
+          "subcats": []
+        },
+        {
+          "title": "Chicken Shop",
+          "alias": "chickenshop",
+          "subcats": []
+        },
+        {
+          "title": "Chicken Wings",
+          "alias": "chicken_wings",
+          "subcats": []
+        },
+        {
+          "title": "Chinese",
+          "alias": "chinese",
+          "subcats": [
+            {
+              "title": "Cantonese",
+              "alias": "cantonese"
+            },
+            {
+              "title": "Dim Sum",
+              "alias": "dimsum"
+            },
+            {
+              "title": "Hainan",
+              "alias": "hainan"
+            },
+            {
+              "title": "Shanghainese",
+              "alias": "shanghainese"
+            },
+            {
+              "title": "Szechuan",
+              "alias": "szechuan"
+            }
+          ]
+        },
+        {
+          "title": "Comfort Food",
+          "alias": "comfortfood",
+          "subcats": []
+        },
+        {
+          "title": "Creperies",
+          "alias": "creperies",
+          "subcats": []
+        },
+        {
+          "title": "Cuban",
+          "alias": "cuban",
+          "subcats": []
+        },
+        {
+          "title": "Czech",
+          "alias": "czech",
+          "subcats": []
+        },
+        {
+          "title": "Delis",
+          "alias": "delis",
+          "subcats": []
+        },
+        {
+          "title": "Diners",
+          "alias": "diners",
+          "subcats": []
+        },
+        {
+          "title": "Dinner Theater",
+          "alias": "dinnertheater",
+          "subcats": []
+        },
+        {
+          "title": "Eritrean",
+          "alias": "eritrean",
+          "subcats": []
+        },
+        {
+          "title": "Ethiopian",
+          "alias": "ethiopian",
+          "subcats": []
+        },
+        {
+          "title": "Fast Food",
+          "alias": "hotdogs",
+          "subcats": []
+        },
+        {
+          "title": "Filipino",
+          "alias": "filipino",
+          "subcats": []
+        },
+        {
+          "title": "Fish & Chips",
+          "alias": "fishnchips",
+          "subcats": []
+        },
+        {
+          "title": "Fondue",
+          "alias": "fondue",
+          "subcats": []
+        },
+        {
+          "title": "Food Court",
+          "alias": "food_court",
+          "subcats": []
+        },
+        {
+          "title": "Food Stands",
+          "alias": "foodstands",
+          "subcats": []
+        },
+        {
+          "title": "French",
+          "alias": "french",
+          "subcats": [
+            {
+              "title": "Mauritius",
+              "alias": "mauritius"
+            },
+            {
+              "title": "Reunion",
+              "alias": "reunion"
+            }
+          ]
+        },
+        {
+          "title": "Game Meat",
+          "alias": "gamemeat",
+          "subcats": []
+        },
+        {
+          "title": "Gastropubs",
+          "alias": "gastropubs",
+          "subcats": []
+        },
+        {
+          "title": "Georgian",
+          "alias": "georgian",
+          "subcats": []
+        },
+        {
+          "title": "German",
+          "alias": "german",
+          "subcats": []
+        },
+        {
+          "title": "Gluten-Free",
+          "alias": "gluten_free",
+          "subcats": []
+        },
+        {
+          "title": "Greek",
+          "alias": "greek",
+          "subcats": []
+        },
+        {
+          "title": "Guamanian",
+          "alias": "guamanian",
+          "subcats": []
+        },
+        {
+          "title": "Halal",
+          "alias": "halal",
+          "subcats": []
+        },
+        {
+          "title": "Hawaiian",
+          "alias": "hawaiian",
+          "subcats": []
+        },
+        {
+          "title": "Himalayan/Nepalese",
+          "alias": "himalayan",
+          "subcats": []
+        },
+        {
+          "title": "Honduran",
+          "alias": "honduran",
+          "subcats": []
+        },
+        {
+          "title": "Hong Kong Style Cafe",
+          "alias": "hkcafe",
+          "subcats": []
+        },
+        {
+          "title": "Hot Dogs",
+          "alias": "hotdog",
+          "subcats": []
+        },
+        {
+          "title": "Hot Pot",
+          "alias": "hotpot",
+          "subcats": []
+        },
+        {
+          "title": "Hungarian",
+          "alias": "hungarian",
+          "subcats": []
+        },
+        {
+          "title": "Iberian",
+          "alias": "iberian",
+          "subcats": []
+        },
+        {
+          "title": "Indian",
+          "alias": "indpak",
+          "subcats": []
+        },
+        {
+          "title": "Indonesian",
+          "alias": "indonesian",
+          "subcats": []
+        },
+        {
+          "title": "Irish",
+          "alias": "irish",
+          "subcats": []
+        },
+        {
+          "title": "Italian",
+          "alias": "italian",
+          "subcats": [
+            {
+              "title": "Calabrian",
+              "alias": "calabrian"
+            },
+            {
+              "title": "Sardinian",
+              "alias": "sardinian"
+            },
+            {
+              "title": "Sicilian",
+              "alias": "sicilian"
+            },
+            {
+              "title": "Tuscan",
+              "alias": "tuscan"
+            }
+          ]
+        },
+        {
+          "title": "Japanese",
+          "alias": "japanese",
+          "subcats": [
+            {
+              "title": "Conveyor Belt Sushi",
+              "alias": "conveyorsushi"
+            },
+            {
+              "title": "Izakaya",
+              "alias": "izakaya"
+            },
+            {
+              "title": "Japanese Curry",
+              "alias": "japacurry"
+            },
+            {
+              "title": "Ramen",
+              "alias": "ramen"
+            },
+            {
+              "title": "Teppanyaki",
+              "alias": "teppanyaki"
+            }
+          ]
+        },
+        {
+          "title": "Kebab",
+          "alias": "kebab",
+          "subcats": []
+        },
+        {
+          "title": "Korean",
+          "alias": "korean",
+          "subcats": []
+        },
+        {
+          "title": "Kosher",
+          "alias": "kosher",
+          "subcats": []
+        },
+        {
+          "title": "Laotian",
+          "alias": "laotian",
+          "subcats": []
+        },
+        {
+          "title": "Latin American",
+          "alias": "latin",
+          "subcats": [
+            {
+              "title": "Colombian",
+              "alias": "colombian"
+            },
+            {
+              "title": "Salvadoran",
+              "alias": "salvadoran"
+            },
+            {
+              "title": "Venezuelan",
+              "alias": "venezuelan"
+            }
+          ]
+        },
+        {
+          "title": "Live/Raw Food",
+          "alias": "raw_food",
+          "subcats": []
+        },
+        {
+          "title": "Malaysian",
+          "alias": "malaysian",
+          "subcats": []
+        },
+        {
+          "title": "Mediterranean",
+          "alias": "mediterranean",
+          "subcats": [
+            {
+              "title": "Falafel",
+              "alias": "falafel"
+            }
+          ]
+        },
+        {
+          "title": "Mexican",
+          "alias": "mexican",
+          "subcats": [
+            {
+              "title": "Tacos",
+              "alias": "tacos"
+            }
+          ]
+        },
+        {
+          "title": "Middle Eastern",
+          "alias": "mideastern",
+          "subcats": [
+            {
+              "title": "Egyptian",
+              "alias": "egyptian"
+            },
+            {
+              "title": "Lebanese",
+              "alias": "lebanese"
+            }
+          ]
+        },
+        {
+          "title": "Modern European",
+          "alias": "modern_european",
+          "subcats": []
+        },
+        {
+          "title": "Mongolian",
+          "alias": "mongolian",
+          "subcats": []
+        },
+        {
+          "title": "Moroccan",
+          "alias": "moroccan",
+          "subcats": []
+        },
+        {
+          "title": "New Mexican Cuisine",
+          "alias": "newmexican",
+          "subcats": []
+        },
+        {
+          "title": "Nicaraguan",
+          "alias": "nicaraguan",
+          "subcats": []
+        },
+        {
+          "title": "Noodles",
+          "alias": "noodles",
+          "subcats": []
+        },
+        {
+          "title": "Pakistani",
+          "alias": "pakistani",
+          "subcats": []
+        },
+        {
+          "title": "Pan Asian",
+          "alias": "panasian",
+          "subcats": []
+        },
+        {
+          "title": "Persian/Iranian",
+          "alias": "persian",
+          "subcats": []
+        },
+        {
+          "title": "Peruvian",
+          "alias": "peruvian",
+          "subcats": []
+        },
+        {
+          "title": "Pizza",
+          "alias": "pizza",
+          "subcats": []
+        },
+        {
+          "title": "Polish",
+          "alias": "polish",
+          "subcats": []
+        },
+        {
+          "title": "Polynesian",
+          "alias": "polynesian",
+          "subcats": []
+        },
+        {
+          "title": "Pop-Up Restaurants",
+          "alias": "popuprestaurants",
+          "subcats": []
+        },
+        {
+          "title": "Portuguese",
+          "alias": "portuguese",
+          "subcats": []
+        },
+        {
+          "title": "Poutineries",
+          "alias": "poutineries",
+          "subcats": []
+        },
+        {
+          "title": "Russian",
+          "alias": "russian",
+          "subcats": []
+        },
+        {
+          "title": "Salad",
+          "alias": "salad",
+          "subcats": []
+        },
+        {
+          "title": "Sandwiches",
+          "alias": "sandwiches",
+          "subcats": []
+        },
+        {
+          "title": "Scandinavian",
+          "alias": "scandinavian",
+          "subcats": []
+        },
+        {
+          "title": "Scottish",
+          "alias": "scottish",
+          "subcats": []
+        },
+        {
+          "title": "Seafood",
+          "alias": "seafood",
+          "subcats": []
+        },
+        {
+          "title": "Singaporean",
+          "alias": "singaporean",
+          "subcats": []
+        },
+        {
+          "title": "Slovakian",
+          "alias": "slovakian",
+          "subcats": []
+        },
+        {
+          "title": "Somali",
+          "alias": "somali",
+          "subcats": []
+        },
+        {
+          "title": "Soul Food",
+          "alias": "soulfood",
+          "subcats": []
+        },
+        {
+          "title": "Soup",
+          "alias": "soup",
+          "subcats": []
+        },
+        {
+          "title": "Southern",
+          "alias": "southern",
+          "subcats": []
+        },
+        {
+          "title": "Spanish",
+          "alias": "spanish",
+          "subcats": []
+        },
+        {
+          "title": "Sri Lankan",
+          "alias": "srilankan",
+          "subcats": []
+        },
+        {
+          "title": "Steakhouses",
+          "alias": "steak",
+          "subcats": []
+        },
+        {
+          "title": "Supper Clubs",
+          "alias": "supperclubs",
+          "subcats": []
+        },
+        {
+          "title": "Sushi Bars",
+          "alias": "sushi",
+          "subcats": []
+        },
+        {
+          "title": "Syrian",
+          "alias": "syrian",
+          "subcats": []
+        },
+        {
+          "title": "Taiwanese",
+          "alias": "taiwanese",
+          "subcats": []
+        },
+        {
+          "title": "Tapas Bars",
+          "alias": "tapas",
+          "subcats": []
+        },
+        {
+          "title": "Tapas/Small Plates",
+          "alias": "tapasmallplates",
+          "subcats": []
+        },
+        {
+          "title": "Tex-Mex",
+          "alias": "tex-mex",
+          "subcats": []
+        },
+        {
+          "title": "Thai",
+          "alias": "thai",
+          "subcats": []
+        },
+        {
+          "title": "Turkish",
+          "alias": "turkish",
+          "subcats": []
+        },
+        {
+          "title": "Ukrainian",
+          "alias": "ukrainian",
+          "subcats": []
+        },
+        {
+          "title": "Uzbek",
+          "alias": "uzbek",
+          "subcats": []
+        },
+        {
+          "title": "Vegan",
+          "alias": "vegan",
+          "subcats": []
+        },
+        {
+          "title": "Vegetarian",
+          "alias": "vegetarian",
+          "subcats": []
+        },
+        {
+          "title": "Vietnamese",
+          "alias": "vietnamese",
+          "subcats": []
+        },
+        {
+          "title": "Waffles",
+          "alias": "waffles",
+          "subcats": []
+        },
+        {
+          "title": "Wraps",
+          "alias": "wraps",
+          "subcats": []
+        }
+      ]
+    }
+  ],
+  "recreational_cats": [
+    {
+      "title": "Active Life",
+      "alias": "active",
+      "cats": [
+        {
+          "title": "Amusement Parks",
+          "alias": "amusementparks",
+          "subcats": []
+        },
+        {
+          "title": "Aquariums",
+          "alias": "aquariums",
+          "subcats": []
+        },
+        {
+          "title": "Archery",
+          "alias": "archery",
+          "subcats": []
+        },
+        {
+          "title": "Axe Throwing",
+          "alias": "axethrowing",
+          "subcats": []
+        },
+        {
+          "title": "Badminton",
+          "alias": "badminton",
+          "subcats": []
+        },
+        {
+          "title": "Baseball Fields",
+          "alias": "baseballfields",
+          "subcats": []
+        },
+        {
+          "title": "Basketball Courts",
+          "alias": "basketballcourts",
+          "subcats": []
+        },
+        {
+          "title": "Batting Cages",
+          "alias": "battingcages",
+          "subcats": []
+        },
+        {
+          "title": "Beaches",
+          "alias": "beaches",
+          "subcats": []
+        },
+        {
+          "title": "Boating",
+          "alias": "boating",
+          "subcats": []
+        },
+        {
+          "title": "Bobsledding",
+          "alias": "bobsledding",
+          "subcats": []
+        },
+        {
+          "title": "Bocce Ball",
+          "alias": "bocceball",
+          "subcats": []
+        },
+        {
+          "title": "Bowling",
+          "alias": "bowling",
+          "subcats": []
+        },
+        {
+          "title": "Bubble Soccer",
+          "alias": "bubblesoccer",
+          "subcats": []
+        },
+        {
+          "title": "Bungee Jumping",
+          "alias": "bungeejumping",
+          "subcats": []
+        },
+        {
+          "title": "Canyoneering",
+          "alias": "canyoneering",
+          "subcats": []
+        },
+        {
+          "title": "Carousels",
+          "alias": "carousels",
+          "subcats": []
+        },
+        {
+          "title": "Challenge Courses",
+          "alias": "challengecourses",
+          "subcats": []
+        },
+        {
+          "title": "Climbing",
+          "alias": "climbing",
+          "subcats": []
+        },
+        {
+          "title": "Dart Arenas",
+          "alias": "dartarenas",
+          "subcats": []
+        },
+        {
+          "title": "Day Camps",
+          "alias": "daycamps",
+          "subcats": []
+        },
+        {
+          "title": "Disc Golf",
+          "alias": "discgolf",
+          "subcats": []
+        },
+        {
+          "title": "Diving",
+          "alias": "diving",
+          "subcats": [
+            {
+              "title": "Free Diving",
+              "alias": "freediving"
+            },
+            {
+              "title": "Scuba Diving",
+              "alias": "scuba"
+            }
+          ]
+        },
+        {
+          "title": "Escape Games",
+          "alias": "escapegames",
+          "subcats": []
+        },
+        {
+          "title": "Fencing Clubs",
+          "alias": "fencing",
+          "subcats": []
+        },
+        {
+          "title": "Fishing",
+          "alias": "fishing",
+          "subcats": []
+        },
+        {
+          "title": "Flyboarding",
+          "alias": "flyboarding",
+          "subcats": []
+        },
+        {
+          "title": "Go Karts",
+          "alias": "gokarts",
+          "subcats": []
+        },
+        {
+          "title": "Golf",
+          "alias": "golf",
+          "subcats": []
+        },
+        {
+          "title": "Gun/Rifle Ranges",
+          "alias": "gun_ranges",
+          "subcats": []
+        },
+        {
+          "title": "Hang Gliding",
+          "alias": "hanggliding",
+          "subcats": []
+        },
+        {
+          "title": "Hiking",
+          "alias": "hiking",
+          "subcats": []
+        },
+        {
+          "title": "Horse Racing",
+          "alias": "horseracing",
+          "subcats": []
+        },
+        {
+          "title": "Horseback Riding",
+          "alias": "horsebackriding",
+          "subcats": []
+        },
+        {
+          "title": "Hot Air Balloons",
+          "alias": "hot_air_balloons",
+          "subcats": []
+        },
+        {
+          "title": "Indoor Playcentre",
+          "alias": "indoor_playcenter",
+          "subcats": []
+        },
+        {
+          "title": "Jet Skis",
+          "alias": "jetskis",
+          "subcats": []
+        },
+        {
+          "title": "Kids Activities",
+          "alias": "kids_activities",
+          "subcats": []
+        },
+        {
+          "title": "Kiteboarding",
+          "alias": "kiteboarding",
+          "subcats": []
+        },
+        {
+          "title": "Lakes",
+          "alias": "lakes",
+          "subcats": []
+        },
+        {
+          "title": "Laser Tag",
+          "alias": "lasertag",
+          "subcats": []
+        },
+        {
+          "title": "Mini Golf",
+          "alias": "mini_golf",
+          "subcats": []
+        },
+        {
+          "title": "Mountain Biking",
+          "alias": "mountainbiking",
+          "subcats": []
+        },
+        {
+          "title": "Nudist",
+          "alias": "nudist",
+          "subcats": []
+        },
+        {
+          "title": "Paddleboarding",
+          "alias": "paddleboarding",
+          "subcats": []
+        },
+        {
+          "title": "Paintball",
+          "alias": "paintball",
+          "subcats": []
+        },
+        {
+          "title": "Paragliding",
+          "alias": "paragliding",
+          "subcats": []
+        },
+        {
+          "title": "Parasailing",
+          "alias": "parasailing",
+          "subcats": []
+        },
+        {
+          "title": "Parks",
+          "alias": "parks",
+          "subcats": [
+            {
+              "title": "Dog Parks",
+              "alias": "dog_parks"
+            },
+            {
+              "title": "Skate Parks",
+              "alias": "skate_parks"
+            }
+          ]
+        },
+        {
+          "title": "Pickleball",
+          "alias": "pickleball",
+          "subcats": []
+        },
+        {
+          "title": "Playgrounds",
+          "alias": "playgrounds",
+          "subcats": []
+        },
+        {
+          "title": "Races & Competitions",
+          "alias": "races",
+          "subcats": []
+        },
+        {
+          "title": "Racing Experience",
+          "alias": "racingexperience",
+          "subcats": []
+        },
+        {
+          "title": "Rafting/Kayaking",
+          "alias": "rafting",
+          "subcats": []
+        },
+        {
+          "title": "Recreation Centers",
+          "alias": "recreation",
+          "subcats": []
+        },
+        {
+          "title": "Rock Climbing",
+          "alias": "rock_climbing",
+          "subcats": []
+        },
+        {
+          "title": "Sailing",
+          "alias": "sailing",
+          "subcats": []
+        },
+        {
+          "title": "Scavenger Hunts",
+          "alias": "scavengerhunts",
+          "subcats": []
+        },
+        {
+          "title": "Skating Rinks",
+          "alias": "skatingrinks",
+          "subcats": []
+        },
+        {
+          "title": "Skydiving",
+          "alias": "skydiving",
+          "subcats": []
+        },
+        {
+          "title": "Sledding",
+          "alias": "sledding",
+          "subcats": []
+        },
+        {
+          "title": "Snorkeling",
+          "alias": "snorkeling",
+          "subcats": []
+        },
+        {
+          "title": "Soccer",
+          "alias": "football",
+          "subcats": []
+        },
+        {
+          "title": "Squash",
+          "alias": "squash",
+          "subcats": []
+        },
+        {
+          "title": "Surfing",
+          "alias": "surfing",
+          "subcats": []
+        },
+        {
+          "title": "Swimming Pools",
+          "alias": "swimmingpools",
+          "subcats": []
+        },
+        {
+          "title": "Tennis",
+          "alias": "tennis",
+          "subcats": []
+        },
+        {
+          "title": "Trampoline Parks",
+          "alias": "trampoline",
+          "subcats": []
+        },
+        {
+          "title": "Tubing",
+          "alias": "tubing",
+          "subcats": []
+        },
+        {
+          "title": "Water Parks",
+          "alias": "waterparks",
+          "subcats": []
+        },
+        {
+          "title": "Wildlife Hunting Ranges",
+          "alias": "wildlifehunting",
+          "subcats": []
+        },
+        {
+          "title": "Ziplining",
+          "alias": "zipline",
+          "subcats": []
+        },
+        {
+          "title": "Zoos",
+          "alias": "zoos",
+          "subcats": [
+            {
+              "title": "Petting Zoos",
+              "alias": "pettingzoos"
+            }
+          ]
+        },
+        {
+          "title": "Zorbing",
+          "alias": "zorbing",
+          "subcats": []
+        }
+      ]
+    },
+    {
+      "title": "Arts & Entertainment",
+      "alias": "arts",
+      "cats": [
+        {
+          "title": "Arcades",
+          "alias": "arcades",
+          "subcats": []
+        },
+        {
+          "title": "Art Galleries",
+          "alias": "galleries",
+          "subcats": []
+        },
+        {
+          "title": "Bingo Halls",
+          "alias": "bingo",
+          "subcats": []
+        },
+        {
+          "title": "Botanical Gardens",
+          "alias": "gardens",
+          "subcats": []
+        },
+        {
+          "title": "Cabaret",
+          "alias": "cabaret",
+          "subcats": []
+        },
+        {
+          "title": "Casinos",
+          "alias": "casinos",
+          "subcats": []
+        },
+        {
+          "title": "Cinema",
+          "alias": "movietheaters",
+          "subcats": [
+            {
+              "title": "Drive-In Theater",
+              "alias": "driveintheater"
+            },
+            {
+              "title": "Outdoor Movies",
+              "alias": "outdoormovies"
+            }
+          ]
+        },
+        {
+          "title": "Cultural Center",
+          "alias": "culturalcenter",
+          "subcats": []
+        },
+        {
+          "title": "Eatertainment",
+          "alias": "eatertainment",
+          "subcats": []
+        },
+        {
+          "title": "Farms",
+          "alias": "farms",
+          "subcats": [
+            {
+              "title": "Attraction Farms",
+              "alias": "attractionfarms"
+            },
+            {
+              "title": "Pick Your Own Farms",
+              "alias": "pickyourown"
+            },
+            {
+              "title": "Ranches",
+              "alias": "ranches"
+            }
+          ]
+        },
+        {
+          "title": "Festivals",
+          "alias": "festivals",
+          "subcats": []
+        },
+        {
+          "title": "Haunted Houses",
+          "alias": "hauntedhouses",
+          "subcats": []
+        },
+        {
+          "title": "Jazz & Blues",
+          "alias": "jazzandblues",
+          "subcats": []
+        },
+        {
+          "title": "Museums",
+          "alias": "museums",
+          "subcats": [
+            {
+              "title": "Art Museums",
+              "alias": "artmuseums"
+            },
+            {
+              "title": "Children's Museums",
+              "alias": "childrensmuseums"
+            }
+          ]
+        },
+        {
+          "title": "Music Venues",
+          "alias": "musicvenues",
+          "subcats": []
+        },
+        {
+          "title": "Observatories",
+          "alias": "observatories",
+          "subcats": []
+        },
+        {
+          "title": "Opera & Ballet",
+          "alias": "opera",
+          "subcats": []
+        },
+        {
+          "title": "Paint & Sip",
+          "alias": "paintandsip",
+          "subcats": []
+        },
+        {
+          "title": "Performing Arts",
+          "alias": "theater",
+          "subcats": []
+        },
+        {
+          "title": "Planetarium",
+          "alias": "planetarium",
+          "subcats": []
+        },
+        {
+          "title": "Race Tracks",
+          "alias": "racetracks",
+          "subcats": []
+        },
+        {
+          "title": "Rodeo",
+          "alias": "rodeo",
+          "subcats": []
+        },
+        {
+          "title": "Stadiums & Arenas",
+          "alias": "stadiumsarenas",
+          "subcats": []
+        },
+        {
+          "title": "Studio Taping",
+          "alias": "studiotaping",
+          "subcats": []
+        },
+        {
+          "title": "Virtual Reality Centers",
+          "alias": "virtualrealitycenters",
+          "subcats": []
+        },
+        {
+          "title": "Wineries",
+          "alias": "wineries",
+          "subcats": [
+            {
+              "title": "Wine Tasting Room",
+              "alias": "winetastingroom"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Hotels & Travel",
+      "alias": "hotelstravel",
+      "cats": [
+        {
+          "title": "Campgrounds",
+          "alias": "campgrounds",
+          "subcats": []
+        },
+        {
+          "title": "Resorts",
+          "alias": "resorts",
+          "subcats": []
+        },
+        {
+          "title": "Ski Resorts",
+          "alias": "skiresorts",
+          "subcats": []
+        },
+        {
+          "title": "Tours",
+          "alias": "tours",
+          "subcats": [
+            {
+              "title": "Aerial Tours",
+              "alias": "aerialtours"
+            },
+            {
+              "title": "Architectural Tours",
+              "alias": "architecturaltours"
+            },
+            {
+              "title": "Art Tours",
+              "alias": "arttours"
+            },
+            {
+              "title": "Beer Tours",
+              "alias": "beertours"
+            },
+            {
+              "title": "Bike tours",
+              "alias": "biketours"
+            },
+            {
+              "title": "Boat Tours",
+              "alias": "boattours"
+            },
+            {
+              "title": "Bus Tours",
+              "alias": "bustours"
+            },
+            {
+              "title": "Food Tours",
+              "alias": "foodtours"
+            },
+            {
+              "title": "Historical Tours",
+              "alias": "historicaltours"
+            },
+            {
+              "title": "Scooter Tours",
+              "alias": "scootertours"
+            },
+            {
+              "title": "Walking Tours",
+              "alias": "walkingtours"
+            },
+            {
+              "title": "Whale Watching Tours",
+              "alias": "whalewatchingtours"
+            },
+            {
+              "title": "Wine Tours",
+              "alias": "winetours"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Local Flavor",
+      "alias": "localflavor",
+      "cats": [
+        {
+          "title": "Parklets",
+          "alias": "parklets",
+          "subcats": []
+        },
+        {
+          "title": "Public Art",
+          "alias": "publicart",
+          "subcats": []
+        },
+        {
+          "title": "Unofficial Yelp Events",
+          "alias": "unofficialyelpevents",
+          "subcats": []
+        },
+        {
+          "title": "Yelp Events",
+          "alias": "yelpevents",
+          "subcats": []
+        }
+      ]
+    },
+    {
+      "title": "Nightlife",
+      "alias": "nightlife",
+      "cats": [
+        {
+          "title": "Adult Entertainment",
+          "alias": "adultentertainment",
+          "subcats": [
+            {
+              "title": "Strip Clubs",
+              "alias": "stripclubs"
+            },
+            {
+              "title": "Striptease Dancers",
+              "alias": "stripteasedancers"
+            }
+          ]
+        },
+        {
+          "title": "Bar Crawl",
+          "alias": "barcrawl",
+          "subcats": []
+        },
+        {
+          "title": "Bars",
+          "alias": "bars",
+          "subcats": [
+            {
+              "title": "Beer Bar",
+              "alias": "beerbar"
+            },
+            {
+              "title": "Champagne Bars",
+              "alias": "champagne_bars"
+            },
+            {
+              "title": "Cigar Bars",
+              "alias": "cigarbars"
+            },
+            {
+              "title": "Cocktail Bars",
+              "alias": "cocktailbars"
+            },
+            {
+              "title": "Dive Bars",
+              "alias": "divebars"
+            },
+            {
+              "title": "Drive-Thru Bars",
+              "alias": "drivethrubars"
+            },
+            {
+              "title": "Gay Bars",
+              "alias": "gaybars"
+            },
+            {
+              "title": "Hookah Bars",
+              "alias": "hookah_bars"
+            },
+            {
+              "title": "Irish Pub",
+              "alias": "irish_pubs"
+            },
+            {
+              "title": "Lounges",
+              "alias": "lounges"
+            },
+            {
+              "title": "Pubs",
+              "alias": "pubs"
+            },
+            {
+              "title": "Speakeasies",
+              "alias": "speakeasies"
+            },
+            {
+              "title": "Sports Bars",
+              "alias": "sportsbars"
+            },
+            {
+              "title": "Tiki Bars",
+              "alias": "tikibars"
+            },
+            {
+              "title": "Vermouth Bars",
+              "alias": "vermouthbars"
+            },
+            {
+              "title": "Whiskey Bars",
+              "alias": "whiskeybars"
+            },
+            {
+              "title": "Wine Bars",
+              "alias": "wine_bars"
+            }
+          ]
+        },
+        {
+          "title": "Beer Gardens",
+          "alias": "beergardens",
+          "subcats": []
+        },
+        {
+          "title": "Club Crawl",
+          "alias": "clubcrawl",
+          "subcats": []
+        },
+        {
+          "title": "Comedy Clubs",
+          "alias": "comedyclubs",
+          "subcats": []
+        },
+        {
+          "title": "Country Dance Halls",
+          "alias": "countrydancehalls",
+          "subcats": []
+        },
+        {
+          "title": "Dance Clubs",
+          "alias": "danceclubs",
+          "subcats": []
+        },
+        {
+          "title": "Jazz & Blues",
+          "alias": "jazzandblues",
+          "subcats": []
+        },
+        {
+          "title": "Karaoke",
+          "alias": "karaoke",
+          "subcats": []
+        },
+        {
+          "title": "Music Venues",
+          "alias": "musicvenues",
+          "subcats": []
+        },
+        {
+          "title": "Piano Bars",
+          "alias": "pianobars",
+          "subcats": []
+        },
+        {
+          "title": "Pool Halls",
+          "alias": "poolhalls",
+          "subcats": []
+        }
+      ]
+    },
+    {
+      "title": "Landmarks & Historical Buildings",
+      "alias": "landmarks",
+      "cats": []
+    },
+    {
+      "title": "Shopping",
+      "alias": "shopping",
+      "cats": [
+        {
+          "title": "Art Galleries",
+          "alias": "galleries",
+          "subcats": []
+        },
+        {
+          "title": "Arts & Crafts",
+          "alias": "artsandcrafts",
+          "subcats": [
+            {
+              "title": "Paint-Your-Own Pottery",
+              "alias": "paintyourownpottery"
+            }
+          ]
+        },
+        {
+          "title": "Flea Markets",
+          "alias": "fleamarkets",
+          "subcats": []
+        },
+        {
+          "title": "Shopping Centers",
+          "alias": "shoppingcenters",
+          "subcats": []
+        }
+      ]
+    }
+  ]
+}
